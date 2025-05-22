@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import Fuse from "fuse.js";
 import {
@@ -11,8 +11,10 @@ import {
 import { Link } from "react-router-dom";
 import "../componentsCss/NavbarCss.css";
 import lgLogo from "../componentsSrcAssets/lglogo.png";
+import { AppContext } from "../../App";
 
 function Navbar() {
+  const{brandName}=useContext(AppContext);
   const [searchTerm, setSearchTerm] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const navigate = useNavigate();

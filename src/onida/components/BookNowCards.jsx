@@ -7,6 +7,7 @@ import {
   deleteData,
   getData,
   forwardData,
+  SendtoEmail,
 } from "../firebaseDatabase/firestoreApi";
 
 function BookNowCards() {
@@ -130,6 +131,15 @@ function BookNowCards() {
                 }}
               >
                 Delete
+              </button>
+              <button
+                className="delete"
+                onClick={() => {
+                  console.log(item);
+                  SendtoEmail(item);
+                }}
+              >
+                Mail
               </button>
               <button
                 className="delete"

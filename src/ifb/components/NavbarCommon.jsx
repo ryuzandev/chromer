@@ -1,5 +1,5 @@
 // export default Navbar;
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import Fuse from "fuse.js";
 import {
@@ -12,26 +12,40 @@ import {
 import { Link } from "react-router-dom";
 import "../componentsCss/NavbarCss.css";
 import lgLogo from "../componentsSrcAssets/ifblogo.png";
+import { AppContext } from "../../App";
 
 function NavbarCommon() {
+  const { brandName } = useContext(AppContext);
   const [searchTerm, setSearchTerm] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const navigate = useNavigate();
 
   // const searchableRoutes = [ /* your full route list */ ];
   const searchableRoutes = [
-    { name: "Chimney", path: "/ifb/chimney" },
-    { name: "Chimeney Service", path: "/ifb/chimney" },
-    { name: "Washing Machine", path: "/ifb/washing" },
-    { name: "Washing Machine Service", path: "/ifb/washing" },
-    { name: "Microwave", path: "/ifb/microwave" },
-    { name: "Microwave Service", path: "/ifb/microwave" },
-    { name: "Air Conditioner", path: "/ifb/aircondition" },
-    { name: "Air Conditioner Service", path: "/ifb/aircondition" },
-    { name: "Refrigerator", path: "/ifb/refridgerater" },
-    { name: "Refrigerator Service", path: "/ifb/refridgerater" },
-    { name: "Dish Washer", path: "/ifb/DishWasher" },
-    { name: "Dish Washer Service", path: "/ifb/DishWasher" },
+    // { name: "Chimney", path: "/ifb/chimney" },
+    // { name: "Chimeney Service", path: "/ifb/chimney" },
+    // { name: "Washing Machine", path: "/ifb/washing" },
+    // { name: "Washing Machine Service", path: "/ifb/washing" },
+    // { name: "Microwave", path: "/ifb/microwave" },
+    // { name: "Microwave Service", path: "/ifb/microwave" },
+    // { name: "Air Conditioner", path: "/ifb/aircondition" },
+    // { name: "Air Conditioner Service", path: "/ifb/aircondition" },
+    // { name: "Refrigerator", path: "/ifb/refridgerater" },
+    // { name: "Refrigerator Service", path: "/ifb/refridgerater" },
+    // { name: "Dish Washer", path: "/ifb/DishWasher" },
+    // { name: "Dish Washer Service", path: "/ifb/DishWasher" },
+    { name: "Chimney", path: `/${brandName}/ifb/chimney` },
+    { name: "Chimeney Service", path: `/${brandName}/ifb/chimney` },
+    { name: "Washing Machine", path: `/${brandName}/ifb/washing` },
+    { name: "Washing Machine Service", path: `/${brandName}/ifb/washing` },
+    { name: "Microwave", path: `/${brandName}/ifb/microwave` },
+    { name: "Microwave Service", path: `/${brandName}/ifb/microwave` },
+    { name: "Air Conditioner", path: `/${brandName}/ifb/aircondition` },
+    { name: "Air Conditioner Service", path: `/${brandName}/ifb/aircondition` },
+    { name: "Refrigerator", path: `/${brandName}/ifb/refrigerator` },
+    { name: "Refrigerator Service", path: `/${brandName}/ifb/refrigerator` },
+    { name: "Dish Washer", path: `/${brandName}/ifb/DishWasher` },
+    { name: "Dish Washer Service", path: `/${brandName}/ifb/DishWasher` },
   ];
 
   const fuse = new Fuse(searchableRoutes, {
@@ -67,7 +81,7 @@ function NavbarCommon() {
         </NavbarComponent.Brand> */}
         <NavbarComponent.Brand
           as={Link}
-          to="/ifb"
+          to={`/${brandName}/ifb`}
           className="d-flex align-items-center"
         >
           <img
@@ -79,9 +93,7 @@ function NavbarCommon() {
 
         <NavbarComponent.Toggle aria-controls="navbarScroll" />
         <NavbarComponent.Collapse id="navbarScroll">
-          <Nav className="me-auto my-2 my-lg-0 nav-scroll" navbarScroll>
-          
-          </Nav>
+          <Nav className="me-auto my-2 my-lg-0 nav-scroll" navbarScroll></Nav>
 
           <Form
             className="d-flex position-relative"

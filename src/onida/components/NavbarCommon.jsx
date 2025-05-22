@@ -1,5 +1,5 @@
 // export default Navbar;
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import Fuse from "fuse.js";
 import {
@@ -12,26 +12,42 @@ import {
 import { Link } from "react-router-dom";
 import "../componentsCss/NavbarCss.css";
 import lgLogo from "../componentsSrcAssets/onidalogo.png";
+import { AppContext } from "../../App";
 
 function NavbarCommon() {
+  const { brandName } = useContext(AppContext);
   const [searchTerm, setSearchTerm] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const navigate = useNavigate();
 
   // const searchableRoutes = [ /* your full route list */ ];
   const searchableRoutes = [
-    { name: "Television", path: "/onida/tv" },
-    { name: "Television Service", path: "/onida/tv" },
-    { name: "Washing Machine", path: "/onida/washing" },
-    { name: "Washing Machine Service", path: "/onida/washing" },
-    { name: "Microwave", path: "/onida/microwave" },
-    { name: "Microwave Service", path: "/onida/microwave" },
-    { name: "Air Conditioner", path: "/onida/aircondition" },
-    { name: "Air Conditioner Service", path: "/onida/aircondition" },
-    { name: "Refrigerator", path: "/onida/refridgerater" },
-    { name: "Refrigerator Service", path: "/onida/Refrigerator" },
+    // { name: "Television", path: "/onida/tv" },
+    // { name: "Television Service", path: "/onida/tv" },
+    // { name: "Washing Machine", path: "/onida/washing" },
+    // { name: "Washing Machine Service", path: "/onida/washing" },
+    // { name: "Microwave", path: "/onida/microwave" },
+    // { name: "Microwave Service", path: "/onida/microwave" },
+    // { name: "Air Conditioner", path: "/onida/aircondition" },
+    // { name: "Air Conditioner Service", path: "/onida/aircondition" },
+    // { name: "Refrigerator", path: "/onida/refridgerater" },
+    // { name: "Refrigerator Service", path: "/onida/Refrigerator" },
     // { name: "Dish Washer", path: "/lg/DishWasher" },
     // { name: "Dish Washer Service", path: "/lg/DishWasher" },
+
+    { name: "Television", path: `/${brandName}/onida/tv` },
+    { name: "Television Service", path: `/${brandName}/onida/tv` },
+    { name: "Washing Machine", path: `/${brandName}/lg/washing` },
+    { name: "Washing Machine Service", path: `/${brandName}/onida/washing` },
+    { name: "Microwave", path: `/${brandName}/onida/microwave` },
+    { name: "Microwave Service", path: `/${brandName}/onida/microwave` },
+    { name: "Air Conditioner", path: `/${brandName}/onida/aircondition` },
+    {
+      name: "Air Conditioner Service",
+      path: `/${brandName}/onida/aircondition`,
+    },
+    { name: "Refrigerator", path: `/${brandName}/onida/Refrigerator` },
+    { name: "Refrigerator Service", path: `/${brandName}/onida/Refrigerator` },
   ];
 
   const fuse = new Fuse(searchableRoutes, {
@@ -67,7 +83,7 @@ function NavbarCommon() {
         </NavbarComponent.Brand> */}
         <NavbarComponent.Brand
           as={Link}
-          to="/onida"
+          to={`/${brandName}/onida`}
           className="d-flex align-items-center"
         >
           <img
@@ -79,9 +95,7 @@ function NavbarCommon() {
 
         <NavbarComponent.Toggle aria-controls="navbarScroll" />
         <NavbarComponent.Collapse id="navbarScroll">
-          <Nav className="me-auto my-2 my-lg-0 nav-scroll" navbarScroll>
-          
-          </Nav>
+          <Nav className="me-auto my-2 my-lg-0 nav-scroll" navbarScroll></Nav>
 
           <Form
             className="d-flex position-relative"

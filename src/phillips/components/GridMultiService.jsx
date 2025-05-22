@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "../componentsCss/GridMultiService.css"; // Import the custom CSS file
 import { Link } from "react-router-dom";
+import { AppContext } from "../../App";
 
 function GridMultiService() {
+  const { brandName } = useContext(AppContext);
   const [isPlayingVideo1, setIsPlayingVideo1] = useState(false); // State to control video 1 play status
   const [isPlayingVideo2, setIsPlayingVideo2] = useState(false); // State to control video 2 play status
   const [isHoveredVideo1, setIsHoveredVideo1] = useState(false); // Hover state for video 1
@@ -67,9 +69,16 @@ function GridMultiService() {
             onMouseEnter={handleMouseEnterVideo1}
             onMouseLeave={handleMouseLeaveVideo1}
           >
-        
-
-            <iframe width="1307" height="735" src="https://www.youtube.com/embed/njX2bu-_Vw4" title="2020 LG OLED l  The Black 4K HDR 60fps" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe
+              width="1307"
+              height="735"
+              src="https://www.youtube.com/embed/njX2bu-_Vw4"
+              title="2020 LG OLED l  The Black 4K HDR 60fps"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
             {isPlayingVideo1 && <div className="overlay"></div>}{" "}
             {/* Show overlay when video is playing */}
           </div>
@@ -89,7 +98,7 @@ function GridMultiService() {
                 We offer expert services for all types of washing machines,
                 ensuring efficiency and durability.
               </p>
-              <Link to="/lg/washing">
+              <Link to={`/${brandName}/lg/washing`}>
                 <button className="service-button">Find More</button>
               </Link>
             </div>
@@ -104,7 +113,7 @@ function GridMultiService() {
                 Our technicians are skilled in repairing air conditioners of all
                 makes and models for better cooling performance.
               </p>
-              <Link to="/lg/aircondition">
+              <Link to={`/${brandName}/lg/aircondition`}>
                 <button className="service-button">Find More</button>
               </Link>
             </div>
@@ -128,7 +137,7 @@ function GridMultiService() {
                 We offer professional repair services for your TV, restoring
                 your viewing experience to its fullest.
               </p>
-              <Link to="/lg/tv">
+              <Link to={`/${brandName}/lg/tv`}>
                 <button className="service-button">Find More</button>
               </Link>
             </div>
@@ -143,7 +152,7 @@ function GridMultiService() {
                 Quick and reliable repair services for microwave ovens, ensuring
                 optimal functionality.
               </p>
-              <Link to="/lg/microwave">
+              <Link to={`/${brandName}/lg/microwave`}>
                 <button className="service-button">Find More</button>
               </Link>
             </div>
@@ -168,7 +177,16 @@ function GridMultiService() {
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe> */}
-            <iframe width="1307" height="735" src="https://www.youtube.com/embed/Tcm1QAodEDE" title="New LG Washing Machine With AI Direct Drive™ | LG" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe
+              width="1307"
+              height="735"
+              src="https://www.youtube.com/embed/Tcm1QAodEDE"
+              title="New LG Washing Machine With AI Direct Drive™ | LG"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
             {isPlayingVideo2 && <div className="overlay"></div>}{" "}
             {/* Show overlay when video is playing */}
           </div>
@@ -196,7 +214,16 @@ function GridMultiService() {
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe> */}
-            <iframe width="1307" height="735" src="https://www.youtube.com/embed/eFW6iqF1siE" title="Embrace Ease-Of-Cooking With Scan To Cook | LG Microwave Oven | ThinQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe
+              width="1307"
+              height="735"
+              src="https://www.youtube.com/embed/eFW6iqF1siE"
+              title="Embrace Ease-Of-Cooking With Scan To Cook | LG Microwave Oven | ThinQ"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
             {isPlayingVideo1 && <div className="overlay"></div>}{" "}
             {/* Show overlay when video is playing */}
           </div>
@@ -216,7 +243,7 @@ function GridMultiService() {
                 We offer expert services for all types of DishWasher, ensuring
                 efficiency and durability.
               </p>
-              <Link to="/lg/DishWasher">
+              <Link to={`/${brandName}/lg/DishWasher`}>
                 <button className="service-button">Find More</button>
               </Link>
             </div>
@@ -231,7 +258,7 @@ function GridMultiService() {
                 Our technicians are skilled in repairing air conditioners of all
                 makes and models for better cooling performance.
               </p>
-              <Link to="/lg/Refrigerator">
+              <Link to={`/${brandName}/lg/Refrigerator`}>
                 <button className="service-button">Find More</button>
               </Link>
             </div>

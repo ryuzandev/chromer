@@ -170,3 +170,38 @@ export const forwardData = async (
     console.error("Error forwarding data: ", error);
   }
 };
+
+export const SendtoEmail = (formData) => {
+  const adminEmail = "ryuzandeveloper@gmail.com"; // Hardcoded admin email
+
+  // Construct subject and body
+  const subject = encodeURIComponent(
+    `SPECIMEN -- ${formData.name} -- ${formData.id}`
+  );
+
+  let body = "";
+  for (const [key, value] of Object.entries(formData)) {
+    body += `${key}: ${value}\n`;
+  }
+  const bodyEncoded = encodeURIComponent(body);
+
+  // Construct mailto and Gmail links
+  const mailtoLink = `mailto:${adminEmail}?subject=${subject}&body=${bodyEncoded}`;
+  const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${adminEmail}&su=${subject}&body=${bodyEncoded}`;
+
+  // Open mailto link in a new window or tab
+  const mailWindow = window.open(mailtoLink, "_self"); // _self to trigger mailto in current tab
+
+  // Check if mailWindow is not opened or closed (timeout mechanism)
+  setTimeout(() => {
+    if (
+      !mailWindow ||
+      mailWindow.closed ||
+      typeof mailWindow.closed === "undefined"
+    ) {
+      console.log("Mail client did not open. Fallback to Gmail.");
+      // Open Gmail if mailto did not work
+      window.open(gmailLink, "_blank");
+    }
+  }, 1000); // Increased timeout for Edge browsers
+};

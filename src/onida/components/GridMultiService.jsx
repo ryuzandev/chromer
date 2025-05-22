@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "../componentsCss/GridMultiService.css"; // Import the custom CSS file
 import { Link } from "react-router-dom";
+import { AppContext } from "../../App";
 
 function GridMultiService() {
+  const { brandName } = useContext(AppContext);
   const [isPlayingVideo1, setIsPlayingVideo1] = useState(false); // State to control video 1 play status
   const [isPlayingVideo2, setIsPlayingVideo2] = useState(false); // State to control video 2 play status
   const [isHoveredVideo1, setIsHoveredVideo1] = useState(false); // Hover state for video 1
@@ -96,7 +98,7 @@ function GridMultiService() {
                 We offer expert services for all types of washing machines,
                 ensuring efficiency and durability.
               </p>
-              <Link to="/onida/washing">
+              <Link to={`/${brandName}/onida/washing`}>
                 <button className="service-button">Find More</button>
               </Link>
             </div>
@@ -111,7 +113,7 @@ function GridMultiService() {
                 Our technicians are skilled in repairing air conditioners of all
                 makes and models for better cooling performance.
               </p>
-              <Link to="/onida/aircondition">
+              <Link to={`/${brandName}/onida/aircondition`}>
                 <button className="service-button">Find More</button>
               </Link>
             </div>
@@ -135,7 +137,7 @@ function GridMultiService() {
                 We offer professional repair services for your TV, restoring
                 your viewing experience to its fullest.
               </p>
-              <Link to="/onida/tv">
+              <Link to={`/${brandName}/onida/tv`}>
                 <button className="service-button">Find More</button>
               </Link>
             </div>
@@ -150,7 +152,7 @@ function GridMultiService() {
                 Quick and reliable repair services for microwave ovens, ensuring
                 optimal functionality.
               </p>
-              <Link to="/onida/microwave">
+              <Link to={`/${brandName}/onida/microwave`}>
                 <button className="service-button">Find More</button>
               </Link>
             </div>
@@ -219,7 +221,7 @@ function GridMultiService() {
                 We offer expert services for all types of DishWasher, ensuring
                 efficiency and durability.
               </p>
-              <Link to="/onida/DishWasher">
+              <Link to={`/${brandName}/onida/DishWasher`}>
                 <button className="service-button">Find More</button>
               </Link>
             </div>
@@ -234,7 +236,7 @@ function GridMultiService() {
                 Our technicians are skilled in repairing air conditioners of all
                 makes and models for better cooling performance.
               </p>
-              <Link to="/onida/Refrigerator">
+              <Link to={`/${brandName}/onida/Refrigerator`}>
                 <button className="service-button">Find More</button>
               </Link>
             </div>

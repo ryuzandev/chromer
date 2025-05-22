@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import Fuse from "fuse.js";
 import {
@@ -11,26 +11,28 @@ import {
 import { Link } from "react-router-dom";
 import "../componentsCss/NavbarCss.css";
 import lgLogo from "../componentsSrcAssets/lglogo.png";
+import { AppContext } from "../../App";
 
 function Navbar() {
+  const { brandName } = useContext(AppContext);
   const [searchTerm, setSearchTerm] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const navigate = useNavigate();
 
   // const searchableRoutes = [ /* your full route list */ ];
   const searchableRoutes = [
-    { name: "Television", path: "/lg/tv" },
-    { name: "Television Service", path: "/lg/tv" },
-    { name: "Washing Machine", path: "/lg/washing" },
-    { name: "Washing Machine Service", path: "/lg/washing" },
-    { name: "Microwave", path: "/lg/microwave" },
-    { name: "Microwave Service", path: "/lg/microwave" },
-    { name: "Air Conditioner", path: "/lg/aircondition" },
-    { name: "Air Conditioner Service", path: "/lg/aircondition" },
-    { name: "Refrigerator", path: "/lg/refridgerater" },
-    { name: "Refrigerator Service", path: "/lg/refridgerater" },
-    { name: "Dish Washer", path: "/lg/DishWasher" },
-    { name: "Dish Washer Service", path: "/lg/DishWasher" },
+    { name: "Television", path: `/${brandName}/lg/tv` },
+    { name: "Television Service", path: `/${brandName}/lg/tv` },
+    { name: "Washing Machine", path: `/${brandName}/lg/washing` },
+    { name: "Washing Machine Service", path: `/${brandName}/lg/washing` },
+    { name: "Microwave", path: `/${brandName}/lg/microwave` },
+    { name: "Microwave Service", path: `/${brandName}/lg/microwave` },
+    { name: "Air Conditioner", path: `/${brandName}/lg/aircondition` },
+    { name: "Air Conditioner Service", path: `/${brandName}/lg/aircondition` },
+    { name: "Refrigerator", path: `/${brandName}/lg/refrigerator` },
+    { name: "Refrigerator Service", path: `/${brandName}/lg/refrigerator` },
+    { name: "Dish Washer", path: `/${brandName}/lg/DishWasher` },
+    { name: "Dish Washer Service", path: `/${brandName}/lg/DishWasher` },
   ];
 
   const fuse = new Fuse(searchableRoutes, {
@@ -66,7 +68,7 @@ function Navbar() {
         </NavbarComponent.Brand> */}
         <NavbarComponent.Brand
           as={Link}
-          to="/lg"
+          to={`/${brandName}/lg`}
           className="d-flex align-items-center"
         >
           <img
@@ -83,25 +85,53 @@ function Navbar() {
             {/* <Nav.Link as={Link} to="/hypersonic" className="text-white">
               Home
             </Nav.Link> */}
-            <Nav.Link as={Link} to="/lg/tv" className="text-white">
+            <Nav.Link
+              as={Link}
+              to={`/${brandName}/lg/tv`}
+              className="text-white"
+            >
               Television
             </Nav.Link>
-            <Nav.Link as={Link} to="/lg/washing" className="text-white">
+            <Nav.Link
+              as={Link}
+              to={`/${brandName}/lg/washing`}
+              className="text-white"
+            >
               Washing-Machine
             </Nav.Link>
-            <Nav.Link as={Link} to="/lg/microwave" className="text-white">
+            <Nav.Link
+              as={Link}
+              to={`/${brandName}/lg/microwave`}
+              className="text-white"
+            >
               Microwave
             </Nav.Link>
-            <Nav.Link as={Link} to="/lg/aircondition" className="text-white">
+            <Nav.Link
+              as={Link}
+              to={`/${brandName}/lg/aircondition`}
+              className="text-white"
+            >
               Air-Conditioner
             </Nav.Link>
-            <Nav.Link as={Link} to="/lg/Refrigerator" className="text-white">
+            <Nav.Link
+              as={Link}
+              to={`/${brandName}/lg/Refrigerator`}
+              className="text-white"
+            >
               Refrigerator
             </Nav.Link>
-            <Nav.Link as={Link} to="/lg/DishWasher" className="text-white">
+            <Nav.Link
+              as={Link}
+              to={`/${brandName}/lg/DishWasher`}
+              className="text-white"
+            >
               Dish-Washer
             </Nav.Link>
-            <Nav.Link as={Link} to="/lg/book-now" className="text-white">
+            <Nav.Link
+              as={Link}
+              to={`/${brandName}/lg/book-now`}
+              className="text-white"
+            >
               Specimen
             </Nav.Link>
             {/* <Nav.Link as={Link} to="/troubleshoot" className="text-white">
@@ -109,7 +139,7 @@ function Navbar() {
             </Nav.Link> */}
             <Nav.Link
               as={Link}
-              to="/lg/exoticdeletecards"
+              to={`/${brandName}/lg/exoticdeletecards`}
               className="text-white"
             >
               Forward-Specimen

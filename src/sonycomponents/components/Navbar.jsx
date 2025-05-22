@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import Fuse from "fuse.js";
 import {
@@ -11,21 +11,23 @@ import {
 import { Link } from "react-router-dom";
 import "../componentsCss/NavbarCss.css";
 import sony from "../componentsSrcAssets/sony.png";
+import { AppContext } from "../../App";
 
 function Navbar() {
+  const { brandName } = useContext(AppContext);
   const [searchTerm, setSearchTerm] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const navigate = useNavigate();
 
   // const searchableRoutes = [ /* your full route list */ ];
   const searchableRoutes = [
-    { name: "Television", path: "/sony/tv" },
-    { name: "Television Service", path: "/sony/tv" },
-    { name: "Music", path: "/sony/musicstereo" },
-    { name: "Music Stereo", path: "/sony/musicstereo" },
-    { name: "Gaming", path: "/sony/playstation" },
-    { name: "playstation", path: "/sony/playstation" },
-    { name: "play station", path: "/sony/playstation" },
+    { name: "Television", path: `${brandName}/sony/tv` },
+    { name: "Television Service", path: `${brandName}/sony/tv` },
+    { name: "Music", path: `${brandName}/sony/musicstereo` },
+    { name: "Music Stereo", path: `${brandName}/sony/musicstereo` },
+    { name: "Gaming", path: `${brandName}/sony/playstation` },
+    { name: "playstation", path: `${brandName}/sony/playstation` },
+    { name: "play station", path: `${brandName}/sony/playstation` },
   ];
 
   const fuse = new Fuse(searchableRoutes, {
@@ -61,7 +63,7 @@ function Navbar() {
         </NavbarComponent.Brand> */}
         <NavbarComponent.Brand
           as={Link}
-          to="/sony"
+          to={`${brandName}/sony`}
           className="d-flex align-items-center"
         >
           <img
@@ -74,23 +76,39 @@ function Navbar() {
         <NavbarComponent.Toggle aria-controls="navbarScroll" />
         <NavbarComponent.Collapse id="navbarScroll">
           <Nav className="me-auto my-2 my-lg-0 nav-scroll" navbarScroll>
-            <Nav.Link as={Link} to="/sony/tv" className="text-black">
+            <Nav.Link
+              as={Link}
+              to={`/${brandName}/sony/tv`}
+              className="text-black"
+            >
               Television
             </Nav.Link>
 
-            <Nav.Link as={Link} to="/sony/musicstereo" className="text-black">
+            <Nav.Link
+              as={Link}
+              to={`/${brandName}/sony/musicstereo`}
+              className="text-black"
+            >
               {/* Refrigerator */}
               Music Stereo
             </Nav.Link>
-            <Nav.Link as={Link} to="/sony/playstation" className="text-black">
+            <Nav.Link
+              as={Link}
+              to={`/${brandName}/sony/playstation`}
+              className="text-black"
+            >
               Play Station
             </Nav.Link>
-            <Nav.Link as={Link} to="/sony/book-now" className="text-black">
+            <Nav.Link
+              as={Link}
+              to={`/${brandName}/sony/book-now`}
+              className="text-black"
+            >
               Specimen
             </Nav.Link>
             <Nav.Link
               as={Link}
-              to="/sony/exoticdeletecards"
+              to={`/${brandName}/sony/exoticdeletecards`}
               className="text-black"
             >
               Forward-Specimen

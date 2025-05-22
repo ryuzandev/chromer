@@ -1,5 +1,5 @@
 // export default Navbar;
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import Fuse from "fuse.js";
 import {
@@ -12,26 +12,40 @@ import {
 import { Link } from "react-router-dom";
 import "../componentsCss/NavbarCss.css";
 import lgLogo from "../componentsSrcAssets/lglogo.png";
+import { AppContext } from "../../App";
 
 function NavbarCommon() {
+  const { brandName } = useContext(AppContext);
   const [searchTerm, setSearchTerm] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const navigate = useNavigate();
 
   // const searchableRoutes = [ /* your full route list */ ];
   const searchableRoutes = [
-    { name: "Television", path: "/lg/tv" },
-    { name: "Television Service", path: "/lg/tv" },
-    { name: "Washing Machine", path: "/lg/washing" },
-    { name: "Washing Machine Service", path: "/lg/washing" },
-    { name: "Microwave", path: "/lg/microwave" },
-    { name: "Microwave Service", path: "/lg/microwave" },
-    { name: "Air Conditioner", path: "/lg/aircondition" },
-    { name: "Air Conditioner Service", path: "/lg/aircondition" },
-    { name: "Refrigerator", path: "/lg/refridgerater" },
-    { name: "Refrigerator Service", path: "/lg/Refrigerator" },
-    { name: "Dish Washer", path: "/lg/DishWasher" },
-    { name: "Dish Washer Service", path: "/lg/DishWasher" },
+    // { name: "Television", path: "/lg/tv" },
+    // { name: "Television Service", path: "/lg/tv" },
+    // { name: "Washing Machine", path: "/lg/washing" },
+    // { name: "Washing Machine Service", path: "/lg/washing" },
+    // { name: "Microwave", path: "/lg/microwave" },
+    // { name: "Microwave Service", path: "/lg/microwave" },
+    // { name: "Air Conditioner", path: "/lg/aircondition" },
+    // { name: "Air Conditioner Service", path: "/lg/aircondition" },
+    // { name: "Refrigerator", path: "/lg/refridgerater" },
+    // { name: "Refrigerator Service", path: "/lg/Refrigerator" },
+    // { name: "Dish Washer", path: "/lg/DishWasher" },
+    // { name: "Dish Washer Service", path: "/lg/DishWasher" },
+    { name: "Television", path: `/${brandName}/lg/tv` },
+    { name: "Television Service", path: `/${brandName}/lg/tv` },
+    { name: "Washing Machine", path: `/${brandName}/lg/washing` },
+    { name: "Washing Machine Service", path: `/${brandName}/lg/washing` },
+    { name: "Microwave", path: `/${brandName}/lg/microwave` },
+    { name: "Microwave Service", path: `/${brandName}/lg/microwave` },
+    { name: "Air Conditioner", path: `/${brandName}/lg/aircondition` },
+    { name: "Air Conditioner Service", path: `/${brandName}/lg/aircondition` },
+    { name: "Refrigerator", path: `/${brandName}/lg/refrigerator` },
+    { name: "Refrigerator Service", path: `/${brandName}/lg/refrigerator` },
+    { name: "Dish Washer", path: `/${brandName}/lg/DishWasher` },
+    { name: "Dish Washer Service", path: `/${brandName}/lg/DishWasher` },
   ];
 
   const fuse = new Fuse(searchableRoutes, {
@@ -67,7 +81,7 @@ function NavbarCommon() {
         </NavbarComponent.Brand> */}
         <NavbarComponent.Brand
           as={Link}
-          to="/lg"
+          to={`/${brandName}/lg`}
           className="d-flex align-items-center"
         >
           <img
@@ -79,9 +93,7 @@ function NavbarCommon() {
 
         <NavbarComponent.Toggle aria-controls="navbarScroll" />
         <NavbarComponent.Collapse id="navbarScroll">
-          <Nav className="me-auto my-2 my-lg-0 nav-scroll" navbarScroll>
-          
-          </Nav>
+          <Nav className="me-auto my-2 my-lg-0 nav-scroll" navbarScroll></Nav>
 
           <Form
             className="d-flex position-relative"

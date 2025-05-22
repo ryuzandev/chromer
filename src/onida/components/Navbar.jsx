@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import Fuse from "fuse.js";
 import {
@@ -11,24 +11,29 @@ import {
 import { Link } from "react-router-dom";
 import "../componentsCss/NavbarCss.css";
 import lgLogo from "../componentsSrcAssets/onidalogo.png";
+import { AppContext } from "../../App";
 
 function Navbar() {
+  const { brandName } = useContext(AppContext);
   const [searchTerm, setSearchTerm] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const navigate = useNavigate();
 
   // const searchableRoutes = [ /* your full route list */ ];
   const searchableRoutes = [
-    { name: "Television", path: "/onida/tv" },
-    { name: "Television Service", path: "/onida/tv" },
-    { name: "Washing Machine", path: "/lg/washing" },
-    { name: "Washing Machine Service", path: "/onida/washing" },
-    { name: "Microwave", path: "/onida/microwave" },
-    { name: "Microwave Service", path: "/onida/microwave" },
-    { name: "Air Conditioner", path: "/onida/aircondition" },
-    { name: "Air Conditioner Service", path: "/onida/aircondition" },
-    { name: "Refrigerator", path: "/onida/refridgerater" },
-    { name: "Refrigerator Service", path: "/onida/refridgerater" },
+    { name: "Television", path: `/${brandName}/onida/tv` },
+    { name: "Television Service", path: `/${brandName}/onida/tv` },
+    { name: "Washing Machine", path: `/${brandName}/lg/washing` },
+    { name: "Washing Machine Service", path: `/${brandName}/onida/washing` },
+    { name: "Microwave", path: `/${brandName}/onida/microwave` },
+    { name: "Microwave Service", path: `/${brandName}/onida/microwave` },
+    { name: "Air Conditioner", path: `/${brandName}/onida/aircondition` },
+    {
+      name: "Air Conditioner Service",
+      path: `/${brandName}/onida/aircondition`,
+    },
+    { name: "Refrigerator", path: `/${brandName}/onida/Refrigerator` },
+    { name: "Refrigerator Service", path: `/${brandName}/onida/Refrigerator` },
     // { name: "Dish Washer", path: "/lg/DishWasher" },
     // { name: "Dish Washer Service", path: "/lg/DishWasher" },
   ];
@@ -66,7 +71,7 @@ function Navbar() {
         </NavbarComponent.Brand> */}
         <NavbarComponent.Brand
           as={Link}
-          to="/onida"
+          to={`/${brandName}/onida`}
           className="d-flex align-items-center"
         >
           <img
@@ -83,25 +88,49 @@ function Navbar() {
             {/* <Nav.Link as={Link} to="/hypersonic" className="text-white">
               Home
             </Nav.Link> */}
-            <Nav.Link as={Link} to="/onida/tv" className="text-white">
+            <Nav.Link
+              as={Link}
+              to={`/${brandName}/onida/tv`}
+              className="text-white"
+            >
               Television
             </Nav.Link>
-            <Nav.Link as={Link} to="/onida/washing" className="text-white">
+            <Nav.Link
+              as={Link}
+              to={`/${brandName}/onida/washing`}
+              className="text-white"
+            >
               Washing-Machine
             </Nav.Link>
-            <Nav.Link as={Link} to="/onida/microwave" className="text-white">
+            <Nav.Link
+              as={Link}
+              to={`/${brandName}/onida/microwave`}
+              className="text-white"
+            >
               Microwave
             </Nav.Link>
-            <Nav.Link as={Link} to="/onida/aircondition" className="text-white">
+            <Nav.Link
+              as={Link}
+              to={`/${brandName}/onida/aircondition`}
+              className="text-white"
+            >
               Air-Conditioner
             </Nav.Link>
-            <Nav.Link as={Link} to="/onida/Refrigerator" className="text-white">
+            <Nav.Link
+              as={Link}
+              to={`/${brandName}/onida/Refrigerator`}
+              className="text-white"
+            >
               Refrigerator
             </Nav.Link>
             {/* <Nav.Link as={Link} to="/lg/DishWasher" className="text-white">
               Dish-Washer
             </Nav.Link> */}
-            <Nav.Link as={Link} to="/onida/book-now" className="text-white">
+            <Nav.Link
+              as={Link}
+              to={`/${brandName}/onida/book-now`}
+              className="text-white"
+            >
               Specimen
             </Nav.Link>
             {/* <Nav.Link as={Link} to="/troubleshoot" className="text-white">
@@ -109,7 +138,7 @@ function Navbar() {
             </Nav.Link> */}
             <Nav.Link
               as={Link}
-              to="/onida/exoticdeletecards"
+              to={`/${brandName}/onida/exoticdeletecards`}
               className="text-white"
             >
               Forward-Specimen

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import Fuse from "fuse.js";
 import {
@@ -11,26 +11,28 @@ import {
 import { Link } from "react-router-dom";
 import "../componentsCss/NavbarCss.css";
 import lgLogo from "../componentsSrcAssets/ifblogo.png";
+import { AppContext } from "../../App";
 
 function Navbar() {
+  const { brandName } = useContext(AppContext);
   const [searchTerm, setSearchTerm] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const navigate = useNavigate();
 
   // const searchableRoutes = [ /* your full route list */ ];
   const searchableRoutes = [
-    { name: "Chimney", path: "/ifb/chimney" },
-    { name: "Chimeney Service", path: "/ifb/chimney" },
-    { name: "Washing Machine", path: "/ifb/washing" },
-    { name: "Washing Machine Service", path: "/ifb/washing" },
-    { name: "Microwave", path: "/ifb/microwave" },
-    { name: "Microwave Service", path: "/ifb/microwave" },
-    { name: "Air Conditioner", path: "/ifb/aircondition" },
-    { name: "Air Conditioner Service", path: "/ifb/aircondition" },
-    { name: "Refrigerator", path: "/ifb/refridgerater" },
-    { name: "Refrigerator Service", path: "/ifb/refridgerater" },
-    { name: "Dish Washer", path: "/ifb/DishWasher" },
-    { name: "Dish Washer Service", path: "/ifb/DishWasher" },
+    { name: "Chimney", path: `/${brandName}/ifb/chimney` },
+    { name: "Chimeney Service", path: `/${brandName}/ifb/chimney` },
+    { name: "Washing Machine", path: `/${brandName}/ifb/washing` },
+    { name: "Washing Machine Service", path: `/${brandName}/ifb/washing` },
+    { name: "Microwave", path: `/${brandName}/ifb/microwave` },
+    { name: "Microwave Service", path: `/${brandName}/ifb/microwave` },
+    { name: "Air Conditioner", path: `/${brandName}/ifb/aircondition` },
+    { name: "Air Conditioner Service", path: `/${brandName}/ifb/aircondition` },
+    { name: "Refrigerator", path: `/${brandName}/ifb/refrigerator` },
+    { name: "Refrigerator Service", path: `/${brandName}/ifb/refrigerator` },
+    { name: "Dish Washer", path: `/${brandName}/ifb/DishWasher` },
+    { name: "Dish Washer Service", path: `/${brandName}/ifb/DishWasher` },
   ];
 
   const fuse = new Fuse(searchableRoutes, {
@@ -66,7 +68,7 @@ function Navbar() {
         </NavbarComponent.Brand> */}
         <NavbarComponent.Brand
           as={Link}
-          to="/ifb"
+          to={`/${brandName}/ifb`}
           className="d-flex align-items-center"
         >
           <img
@@ -83,30 +85,58 @@ function Navbar() {
             {/* <Nav.Link as={Link} to="/hypersonic" className="text-white">
               Home
             </Nav.Link> */}
-            <Nav.Link as={Link} to="/ifb/chimney" className="text-white">
+            <Nav.Link
+              as={Link}
+              to={`/${brandName}/ifb/chimney`}
+              className="text-white"
+            >
               Chimney
             </Nav.Link>
-            <Nav.Link as={Link} to="/ifb/washing" className="text-white">
+            <Nav.Link
+              as={Link}
+              to={`/${brandName}/ifb/washing`}
+              className="text-white"
+            >
               Washing-Machine
             </Nav.Link>
-            <Nav.Link as={Link} to="/ifb/microwave" className="text-white">
+            <Nav.Link
+              as={Link}
+              to={`/${brandName}/ifb/microwave`}
+              className="text-white"
+            >
               Microwave
             </Nav.Link>
-            <Nav.Link as={Link} to="/ifb/aircondition" className="text-white">
+            <Nav.Link
+              as={Link}
+              to={`/${brandName}/ifb/aircondition`}
+              className="text-white"
+            >
               Air-Conditioner
             </Nav.Link>
-            <Nav.Link as={Link} to="/ifb/Refrigerator" className="text-white">
+            <Nav.Link
+              as={Link}
+              to={`/${brandName}/ifb/Refrigerator`}
+              className="text-white"
+            >
               Refrigerator
             </Nav.Link>
-            <Nav.Link as={Link} to="/ifb/DishWasher" className="text-white">
+            <Nav.Link
+              as={Link}
+              to={`/${brandName}/ifb/DishWasher`}
+              className="text-white"
+            >
               Dish-Washer
             </Nav.Link>
-            <Nav.Link as={Link} to="/ifb/book-now" className="text-white">
+            <Nav.Link
+              as={Link}
+              to={`/${brandName}/ifb/book-now`}
+              className="text-white"
+            >
               Specimen
             </Nav.Link>
             <Nav.Link
               as={Link}
-              to="/ifb/exoticdeletecards"
+              to={`/${brandName}/ifb/exoticdeletecards`}
               className="text-white"
             >
               Forward-Specimen

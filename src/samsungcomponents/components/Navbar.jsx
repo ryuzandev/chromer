@@ -1,5 +1,4 @@
-
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import Fuse from "fuse.js";
 import {
@@ -12,26 +11,34 @@ import {
 import { Link } from "react-router-dom";
 import "../componentsCss/NavbarCss.css";
 import samsung from "../componentsSrcAssets/samsung.png";
+import { AppContext } from "../../App";
 
 function Navbar() {
+  const { brandName } = useContext(AppContext);
   const [searchTerm, setSearchTerm] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const navigate = useNavigate();
 
   // const searchableRoutes = [ /* your full route list */ ];
   const searchableRoutes = [
-    { name: "Television", path: "/samsung/tv" },
-    { name: "Television Service", path: "/samsung/tv" },
-    { name: "Washing Machine", path: "/samsung/washing" },
-    { name: "Washing Machine Service", path: "/samsung/washing" },
-    { name: "Microwave", path: "/samsung/microwave" },
-    { name: "Microwave Service", path: "/samsung/microwave" },
-    { name: "Air Conditioner", path: "/samsung/aircondition" },
-    { name: "Air Conditioner Service", path: "/samsung/aircondition" },
-    { name: "Refrigerator", path: "/samsung/Refrigerator" },
-    { name: "Refrigerator Service", path: "/samsung/refridgerater" },
-    { name: "Dish Washer", path: "/samsung/DishWasher" },
-    { name: "Dish Washer Service", path: "/samsung/DishWasher" },
+    { name: "Television", path: `/${brandName}/samsung/tv` },
+    { name: "Television Service", path: `/${brandName}/samsung/tv` },
+    { name: "Washing Machine", path: `/${brandName}/samsung/washing` },
+    { name: "Washing Machine Service", path: `/${brandName}/samsung/washing` },
+    { name: "Microwave", path: `/${brandName}/samsung/microwave` },
+    { name: "Microwave Service", path: `/${brandName}/samsung/microwave` },
+    { name: "Air Conditioner", path: `/${brandName}/samsung/aircondition` },
+    {
+      name: "Air Conditioner Service",
+      path: `/${brandName}/samsung/aircondition`,
+    },
+    { name: "Refrigerator", path: `/${brandName}/samsung/Refrigerator` },
+    {
+      name: "Refrigerator Service",
+      path: `/${brandName}/samsung/Refrigerator`,
+    },
+    { name: "Dish Washer", path: `/${brandName}/samsung/DishWasher` },
+    { name: "Dish Washer Service", path: `/${brandName}/samsung/DishWasher` },
   ];
 
   const fuse = new Fuse(searchableRoutes, {
@@ -67,7 +74,7 @@ function Navbar() {
         </NavbarComponent.Brand> */}
         <NavbarComponent.Brand
           as={Link}
-          to="/samsung"
+          to={`/${brandName}/samsung`}
           className="d-flex align-items-center"
         >
           <img
@@ -84,25 +91,53 @@ function Navbar() {
             {/* <Nav.Link as={Link} to="/hypersonic" className="text-white">
               Home
             </Nav.Link> */}
-            <Nav.Link as={Link} to="/samsung/tv" className="text-white">
+            <Nav.Link
+              as={Link}
+              to={`/${brandName}/samsung/tv`}
+              className="text-white"
+            >
               Television
             </Nav.Link>
-            <Nav.Link as={Link} to="/samsung/washing" className="text-white">
+            <Nav.Link
+              as={Link}
+              to={`/${brandName}/samsung/washing`}
+              className="text-white"
+            >
               Washing-Machine
             </Nav.Link>
-            <Nav.Link as={Link} to="/samsung/microwave" className="text-white">
+            <Nav.Link
+              as={Link}
+              to={`/${brandName}/samsung/microwave`}
+              className="text-white"
+            >
               Microwave
             </Nav.Link>
-            <Nav.Link as={Link} to="/samsung/aircondition" className="text-white">
+            <Nav.Link
+              as={Link}
+              to={`/${brandName}/samsung/aircondition`}
+              className="text-white"
+            >
               Air-Conditioner
             </Nav.Link>
-            <Nav.Link as={Link} to="/samsung/Refrigerator" className="text-white">
+            <Nav.Link
+              as={Link}
+              to={`/${brandName}/samsung/Refrigerator`}
+              className="text-white"
+            >
               Refrigerator
             </Nav.Link>
-            <Nav.Link as={Link} to="/samsung/DishWasher" className="text-white">
+            <Nav.Link
+              as={Link}
+              to={`/${brandName}/samsung/DishWasher`}
+              className="text-white"
+            >
               Dish-Washer
             </Nav.Link>
-            <Nav.Link as={Link} to="/samsung/book-now" className="text-white">
+            <Nav.Link
+              as={Link}
+              to={`/${brandName}/samsung/book-now`}
+              className="text-white"
+            >
               Specimen
             </Nav.Link>
             {/* <Nav.Link as={Link} to="/troubleshoot" className="text-white">
@@ -110,7 +145,7 @@ function Navbar() {
             </Nav.Link> */}
             <Nav.Link
               as={Link}
-              to="/samsung/exoticdeletecards"
+              to={`/${brandName}/samsung/exoticdeletecards`}
               className="text-white"
             >
               Forward-Specimen

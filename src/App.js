@@ -21,6 +21,7 @@ import Dishwasher from "./lgcomponents/components/DishWasher";
 import Chatbot from "./lgcomponents/components/AssestComponents/Chatbot";
 import ContactUsFloating from "./lgcomponents/components/AssestComponents/ContactUsFloating";
 import ExoticAUtoDeleteCards from "./lgcomponents/components/ExoticAutoDeleteCards";
+import ConsoleBox from "./lgcomponents/components/AssestComponents/ConsoleBox";
 // importing Components FOR lgcomponents------------------------------> end
 
 // SAMSUNG COMPONENTS START HERE------------------------------------------->
@@ -43,6 +44,7 @@ import SamDishwasher from "./samsungcomponents/components/DishWasher";
 import SamChatbot from "./samsungcomponents/components/AssestComponents/Chatbot";
 import SamContactUsFloating from "./samsungcomponents/components/AssestComponents/ContactUsFloating";
 import SamExoticAUtoDeleteCards from "./samsungcomponents/components/ExoticAutoDeleteCards";
+import SamConsoleBox from "./samsungcomponents/components/AssestComponents/ConsoleBox";
 // SAMSUNG COMPONENTS END HERE----------------------------------------------->
 
 // SONY COMPONENTS START HERE------------------------------------------->
@@ -60,6 +62,7 @@ import SonyPlayStation from "./sonycomponents/components/PlayStation";
 import SonyChatbot from "./sonycomponents/components/AssestComponents/Chatbot";
 import SonyContactUsFloating from "./sonycomponents/components/AssestComponents/ContactUsFloating";
 import SonyExoticAUtoDeleteCards from "./sonycomponents/components/ExoticAutoDeleteCards";
+import SonyConsoleBox from "./sonycomponents/components/AssestComponents/ConsoleBox";
 // SONY COMPONENTS END HERE----------------------------------------------->
 
 // Importing Components FOR ifbcomponents------------------------------> start
@@ -82,6 +85,7 @@ import IfbDishwasher from "./ifb/components/DishWasher";
 import IfbChatbot from "./ifb/components/AssestComponents/Chatbot";
 import IfbContactUsFloating from "./ifb/components/AssestComponents/ContactUsFloating";
 import IfbExoticAUtoDeleteCards from "./ifb/components/ExoticAutoDeleteCards";
+import IfbConsoleBox from "./ifb/components/AssestComponents/ConsoleBox";
 // importing Components FOR ifbcomponents------------------------------> end
 // Importing Components FOR ONIDAcomponents------------------------------> start
 import OnidaOffers from "./onida/components/Offers";
@@ -103,6 +107,7 @@ import OnidaDishwasher from "./onida/components/DishWasher";
 import OnidaChatbot from "./onida/components/AssestComponents/Chatbot";
 import OnidaContactUsFloating from "./onida/components/AssestComponents/ContactUsFloating";
 import OnidaExoticAUtoDeleteCards from "./onida/components/ExoticAutoDeleteCards";
+import OnidaConsoleBox from "./onida/components/AssestComponents/ConsoleBox";
 // importing Components FOR ONIDAcomponents------------------------------> end
 // Importing Components FOR WHIRLPOOLcomponents------------------------------> start
 import WpOffers from "./whirlpool/components/Offers";
@@ -124,6 +129,7 @@ import WpDishwasher from "./whirlpool/components/DishWasher";
 import WpChatbot from "./whirlpool/components/AssestComponents/Chatbot";
 import WpContactUsFloating from "./whirlpool/components/AssestComponents/ContactUsFloating";
 import WpExoticAUtoDeleteCards from "./whirlpool/components/ExoticAutoDeleteCards";
+import WpConsoleBox from "./whirlpool/components/AssestComponents/ConsoleBox";
 // importing Components FOR WHIRLPOOLcomponents------------------------------> end
 // Importing Components FOR PHILLIPScomponents------------------------------> start
 import PhillipsOffers from "./phillips/components/Offers";
@@ -145,11 +151,13 @@ import PhillipsDishwasher from "./phillips/components/DishWasher";
 import PhillipsChatbot from "./phillips/components/AssestComponents/Chatbot";
 import PhillipsContactUsFloating from "./phillips/components/AssestComponents/ContactUsFloating";
 import PhillipsExoticAUtoDeleteCards from "./phillips/components/ExoticAutoDeleteCards";
+import PhillipsConsoleBox from "./phillips/components/AssestComponents/ConsoleBox";
 // importing Components FOR PHILLIPScomponents------------------------------> end
 
 // DEMO COMPONENTS START---------->
 import GoogleClone from "./democomponents/GoogleClone";
 import Hombale from "./democomponents/Homebale";
+
 // DEMO COMPONENTS END  ---------->
 
 // Context Resource
@@ -159,12 +167,13 @@ import { createContext } from "react";
 export const AppContext = createContext();
 
 function App() {
+  const brandName = "immortal";
   return (
-    <AppContext.Provider value={{}}>
+    <AppContext.Provider value={{ brandName }}>
       <Router>
         <Routes>
           <Route
-            path="commercialdatabasealigned/"
+            path="chromer/"
             element={
               <>
                 <GoogleClone />
@@ -172,16 +181,19 @@ function App() {
             }
           />
           <Route
-            path="homebale/"
+            // path="homebale/"
+            path={`${brandName}/`}
             element={
               <>
                 <Hombale />
+                {/* <ConsoleBox /> */}
               </>
             }
           />
           {/* LG COMPONENTS START HERE ---------------------------> */}
           <Route
-            path="lg/"
+            // path="lg/"
+            path={`/${brandName}/lg/`}
             element={
               <>
                 <Offers />
@@ -191,13 +203,15 @@ function App() {
                 <Chatbot />
                 <ContactUsFloating />
                 <Footer />
+                <ConsoleBox />
               </>
             }
           />
 
           {/* BookNow Page */}
           <Route
-            path="lg/book-now"
+            // path="lg/book-now"
+            path={`/${brandName}/lg/book-now`}
             element={
               <>
                 <Offers />
@@ -206,13 +220,15 @@ function App() {
                 <Chatbot />
                 <ContactUsFloating />
                 <Footer />
+                <ConsoleBox />
               </>
             }
           />
 
           {/* Troubleshoot Page */}
           <Route
-            path="lg/troubleshoot"
+            // path="lg/troubleshoot"
+            path={`/${brandName}/lg/troubleshoot`}
             element={
               <>
                 <Offers />
@@ -221,13 +237,15 @@ function App() {
                 <Chatbot />
                 <ContactUsFloating />
                 <Footer />
+                <ConsoleBox />
               </>
             }
           />
 
           {/* Troubleshoot Page */}
           <Route
-            path="lg/exoticdeletecards"
+            // path="lg/exoticdeletecards"
+            path={`/${brandName}/lg/exoticdeletecards`}
             element={
               <>
                 <Offers />
@@ -236,13 +254,15 @@ function App() {
                 <Chatbot />
                 <ContactUsFloating />
                 <Footer />
+                <ConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="lg/tv"
+            // path="lg/tv"
+            path={`/${brandName}/lg/tv`}
             element={
               <>
                 <Offers />
@@ -251,13 +271,15 @@ function App() {
                 <Chatbot />
                 <ContactUsFloating />
                 <Footer />
+                <ConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="/lg/washing"
+            // path="/lg/washing"
+            path={`/${brandName}/lg/washing`}
             element={
               <>
                 <Offers />
@@ -266,13 +288,15 @@ function App() {
                 <Chatbot />
                 <ContactUsFloating />
                 <Footer />
+                <ConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="lg/microwave"
+            // path="lg/microwave"
+            path={`/${brandName}/lg/microwave`}
             element={
               <>
                 <Offers />
@@ -281,13 +305,15 @@ function App() {
                 <Chatbot />
                 <ContactUsFloating />
                 <Footer />
+                <ConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="lg/Refrigerator"
+            // path="lg/Refrigerator"
+            path={`/${brandName}/lg/Refrigerator`}
             element={
               <>
                 <Offers />
@@ -296,13 +322,15 @@ function App() {
                 <Chatbot />
                 <ContactUsFloating />
                 <Footer />
+                <ConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="lg/DishWasher"
+            // path="lg/DishWasher"
+            path={`/${brandName}/lg/DishWasher`}
             element={
               <>
                 <Offers />
@@ -311,13 +339,15 @@ function App() {
                 <Chatbot />
                 <ContactUsFloating />
                 <Footer />
+                <ConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="lg/aircondition"
+            // path="lg/aircondition"
+            path={`/${brandName}/lg/aircondition`}
             element={
               <>
                 <Offers />
@@ -326,13 +356,15 @@ function App() {
                 <Chatbot />
                 <ContactUsFloating />
                 <Footer />
+                <ConsoleBox />
               </>
             }
           />
 
           {/* All products Page */}
           <Route
-            path="lg/products"
+            // path="lg/products"
+            path={`/${brandName}/lg/products`}
             element={
               <>
                 <Offers />
@@ -341,13 +373,15 @@ function App() {
                 <Chatbot />
                 <ContactUsFloating />
                 <Footer />
+                <ConsoleBox />
               </>
             }
           />
           {/* LG COMPONENTS END HERE -------------------------->  */}
           {/* SAMSUNG COMPONENTS START HERE-------------------------------> */}
           <Route
-            path="samsung/"
+            // path="samsung/"
+            path={`/${brandName}/samsung/`}
             element={
               <>
                 <SamOffers />
@@ -357,13 +391,15 @@ function App() {
                 <SamChatbot />
                 <SamContactUsFloating />
                 <SamFooter />
+                <SamConsoleBox />
               </>
             }
           />
 
           {/* BookNow Page */}
           <Route
-            path="samsung/book-now"
+            // path="samsung/book-now"
+            path={`/${brandName}/samsung/book-now`}
             element={
               <>
                 <SamOffers />
@@ -372,13 +408,15 @@ function App() {
                 <SamChatbot />
                 <SamContactUsFloating />
                 <SamFooter />
+                <SamConsoleBox />
               </>
             }
           />
 
           {/* Troubleshoot Page */}
           <Route
-            path="samsung/troubleshoot"
+            // path="samsung/troubleshoot"
+            path={`/${brandName}/samsung/troubleshoot`}
             element={
               <>
                 <SamOffers />
@@ -387,13 +425,15 @@ function App() {
                 <SamChatbot />
                 <SamContactUsFloating />
                 <SamFooter />
+                <SamConsoleBox />
               </>
             }
           />
 
           {/* Troubleshoot Page */}
           <Route
-            path="samsung/exoticdeletecards"
+            // path="samsung/exoticdeletecards"
+            path={`/${brandName}/samsung/exoticdeletecards`}
             element={
               <>
                 <SamOffers />
@@ -402,13 +442,15 @@ function App() {
                 <SamChatbot />
                 <SamContactUsFloating />
                 <SamFooter />
+                <SamConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="samsung/tv"
+            // path="samsung/tv"
+            path={`/${brandName}/samsung/tv`}
             element={
               <>
                 <SamOffers />
@@ -417,13 +459,15 @@ function App() {
                 <SamChatbot />
                 <SamContactUsFloating />
                 <SamFooter />
+                <SamConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="samsung/washing"
+            // path="samsung/washing"
+            path={`/${brandName}/samsung/washing`}
             element={
               <>
                 <SamOffers />
@@ -432,13 +476,15 @@ function App() {
                 <SamChatbot />
                 <SamContactUsFloating />
                 <SamFooter />
+                <SamConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="samsung/microwave"
+            // path="samsung/microwave"
+            path={`/${brandName}/samsung/microwave`}
             element={
               <>
                 <SamOffers />
@@ -447,13 +493,15 @@ function App() {
                 <SamChatbot />
                 <SamContactUsFloating />
                 <SamFooter />
+                <SamConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="samsung/Refrigerator"
+            // path="samsung/Refrigerator"
+            path={`/${brandName}/samsung/Refrigerator`}
             element={
               <>
                 <SamOffers />
@@ -462,13 +510,15 @@ function App() {
                 <SamChatbot />
                 <SamContactUsFloating />
                 <SamFooter />
+                <SamConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="samsung/DishWasher"
+            // path="samsung/DishWasher"
+            path={`/${brandName}/samsung/DishWasher`}
             element={
               <>
                 <SamOffers />
@@ -477,13 +527,15 @@ function App() {
                 <SamChatbot />
                 <SamContactUsFloating />
                 <SamFooter />
+                <SamConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="samsung/aircondition"
+            // path="samsung/aircondition"
+            path={`/${brandName}/samsung/aircondition`}
             element={
               <>
                 <SamOffers />
@@ -492,13 +544,15 @@ function App() {
                 <SamChatbot />
                 <SamContactUsFloating />
                 <SamFooter />
+                <SamConsoleBox />
               </>
             }
           />
 
           {/* All products Page */}
           <Route
-            path="samsung/products"
+            // path="samsung/products"
+            path={`/${brandName}/samsung/products`}
             element={
               <>
                 <SamOffers />
@@ -507,13 +561,15 @@ function App() {
                 <SamChatbot />
                 <SamContactUsFloating />
                 <SamFooter />
+                <SamConsoleBox />
               </>
             }
           />
           {/* SAMSUNG COMPONENTS END HERE--------------------------------- */}
           {/* SONY COMPONENTS START HERE ---------------------------> */}
           <Route
-            path="sony/"
+            // path="sony/"
+            path={`/${brandName}/sony/`}
             element={
               <>
                 <SonyOffers />
@@ -523,13 +579,15 @@ function App() {
                 <SonyChatbot />
                 <SonyContactUsFloating />
                 <SonyFooter />
+                <SonyConsoleBox />
               </>
             }
           />
 
           {/* BookNow Page */}
           <Route
-            path="sony/book-now"
+            // path="sony/book-now"
+            path={`/${brandName}/sony/book-now`}
             element={
               <>
                 <SonyOffers />
@@ -538,13 +596,15 @@ function App() {
                 <SonyChatbot />
                 <SonyContactUsFloating />
                 <SonyFooter />
+                <SonyConsoleBox />
               </>
             }
           />
 
           {/* Troubleshoot Page */}
           <Route
-            path="sony/troubleshoot"
+            // path="sony/troubleshoot"
+            path={`/${brandName}/sony/troubleshoot`}
             element={
               <>
                 <SonyOffers />
@@ -553,12 +613,14 @@ function App() {
                 <SonyChatbot />
                 <SonyContactUsFloating />
                 <SonyFooter />
+                <SonyConsoleBox />
               </>
             }
           />
           {/* Troubleshoot Page */}
           <Route
-            path="sony/exoticdeletecards"
+            // path="sony/exoticdeletecards"
+            path={`/${brandName}/sony/exoticdeletecards`}
             element={
               <>
                 <SonyOffers />
@@ -567,13 +629,15 @@ function App() {
                 <SonyChatbot />
                 <SonyContactUsFloating />
                 <SonyFooter />
+                <SonyConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="sony/tv"
+            // path="sony/tv"
+            path={`/${brandName}/sony/tv`}
             element={
               <>
                 <SonyOffers />
@@ -582,12 +646,14 @@ function App() {
                 <SonyChatbot />
                 <SonyContactUsFloating />
                 <SonyFooter />
+                <SonyConsoleBox />
               </>
             }
           />
 
           <Route
-            path="sony/musicstereo"
+            // path="sony/musicstereo"
+            path={`/${brandName}/sony/musicstereo`}
             element={
               <>
                 <SonyOffers />
@@ -596,11 +662,13 @@ function App() {
                 <SonyChatbot />
                 <SonyContactUsFloating />
                 <SonyFooter />
+                <SonyConsoleBox />
               </>
             }
           />
           <Route
-            path="sony/playstation"
+            // path="sony/playstation"
+            path={`/${brandName}/sony/playstation`}
             element={
               <>
                 <SonyOffers />
@@ -609,13 +677,15 @@ function App() {
                 <SonyChatbot />
                 <SonyContactUsFloating />
                 <SonyFooter />
+                <SonyConsoleBox />
               </>
             }
           />
 
           {/* All products Page */}
           <Route
-            path="sony/products"
+            // path="sony/products"
+            path={`/${brandName}/sony/products`}
             element={
               <>
                 <SonyOffers />
@@ -624,6 +694,7 @@ function App() {
                 <Chatbot />
                 <ContactUsFloating />
                 <SonyFooter />
+                <SonyConsoleBox />
               </>
             }
           />
@@ -631,7 +702,8 @@ function App() {
 
           {/* IFB COMPONENTS START HERE ---------------------------> */}
           <Route
-            path="ifb/"
+            // path="ifb/"
+            path={`/${brandName}/ifb/`}
             element={
               <>
                 <IfbOffers />
@@ -641,13 +713,15 @@ function App() {
                 <IfbChatbot />
                 <IfbContactUsFloating />
                 <IfbFooter />
+                <IfbConsoleBox />
               </>
             }
           />
 
           {/* BookNow Page */}
           <Route
-            path="ifb/book-now"
+            // path="ifb/book-now"
+            path={`/${brandName}/ifb/book-now`}
             element={
               <>
                 <IfbOffers />
@@ -656,13 +730,15 @@ function App() {
                 <IfbChatbot />
                 <IfbContactUsFloating />
                 <IfbFooter />
+                <IfbConsoleBox />
               </>
             }
           />
 
           {/* Troubleshoot Page */}
           <Route
-            path="ifb/troubleshoot"
+            // path="ifb/troubleshoot"
+            path={`/${brandName}/ifb/troubleshoot`}
             element={
               <>
                 <IfbOffers />
@@ -671,12 +747,14 @@ function App() {
                 <IfbChatbot />
                 <IfbContactUsFloating />
                 <IfbFooter />
+                <IfbConsoleBox />
               </>
             }
           />
 
           <Route
-            path="ifb/exoticdeletecards"
+            // path="ifb/exoticdeletecards"
+            path={`/${brandName}/ifb/exoticdeletecards`}
             element={
               <>
                 <IfbOffers />
@@ -685,13 +763,15 @@ function App() {
                 <IfbChatbot />
                 <IfbContactUsFloating />
                 <IfbFooter />
+                <IfbConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="ifb/chimney"
+            // path="ifb/chimney"
+            path={`/${brandName}/ifb/chimney`}
             element={
               <>
                 <IfbOffers />
@@ -700,13 +780,15 @@ function App() {
                 <IfbChatbot />
                 <IfbContactUsFloating />
                 <IfbFooter />
+                <IfbConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="ifb/washing"
+            // path="ifb/washing"
+            path={`/${brandName}/ifb/washing`}
             element={
               <>
                 <IfbOffers />
@@ -715,13 +797,15 @@ function App() {
                 <IfbChatbot />
                 <IfbContactUsFloating />
                 <IfbFooter />
+                <IfbConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="ifb/microwave"
+            // path="ifb/microwave"
+            path={`/${brandName}/ifb/microwave`}
             element={
               <>
                 <IfbOffers />
@@ -730,13 +814,15 @@ function App() {
                 <IfbChatbot />
                 <IfbContactUsFloating />
                 <IfbFooter />
+                <IfbConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="ifb/Refrigerator"
+            // path="ifb/Refrigerator"
+            path={`/${brandName}/ifb/Refrigerator`}
             element={
               <>
                 <IfbOffers />
@@ -745,13 +831,15 @@ function App() {
                 <IfbChatbot />
                 <IfbContactUsFloating />
                 <IfbFooter />
+                <IfbConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="ifb/DishWasher"
+            // path="ifb/DishWasher"
+            path={`/${brandName}/ifb/DishWasher`}
             element={
               <>
                 <IfbOffers />
@@ -760,13 +848,15 @@ function App() {
                 <IfbChatbot />
                 <IfbContactUsFloating />
                 <IfbFooter />
+                <IfbConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="ifb/aircondition"
+            // path="ifb/aircondition"
+            path={`/${brandName}/ifb/aircondition`}
             element={
               <>
                 <IfbOffers />
@@ -775,13 +865,15 @@ function App() {
                 <IfbChatbot />
                 <IfbContactUsFloating />
                 <IfbFooter />
+                <IfbConsoleBox />
               </>
             }
           />
 
           {/* All products Page */}
           <Route
-            path="ifb/products"
+            // path="ifb/products"
+            path={`/${brandName}/ifb/products`}
             element={
               <>
                 <IfbOffers />
@@ -790,13 +882,15 @@ function App() {
                 <IfbChatbot />
                 <IfbContactUsFloating />
                 <IfbFooter />
+                <IfbConsoleBox />
               </>
             }
           />
           {/* IFB COMPONENTS END HERE -------------------------->  */}
           {/* ONIDA COMPONENTS START HERE ---------------------------> */}
           <Route
-            path="onida/"
+            // path="onida/"
+            path={`/${brandName}/onida/`}
             element={
               <>
                 <OnidaOffers />
@@ -806,13 +900,15 @@ function App() {
                 <OnidaChatbot />
                 <OnidaContactUsFloating />
                 <OnidaFooter />
+                <OnidaConsoleBox />
               </>
             }
           />
 
           {/* BookNow Page */}
           <Route
-            path="onida/book-now"
+            // path="onida/book-now"
+            path={`/${brandName}/onida/book-now`}
             element={
               <>
                 <OnidaOffers />
@@ -821,13 +917,15 @@ function App() {
                 <OnidaChatbot />
                 <OnidaContactUsFloating />
                 <OnidaFooter />
+                <OnidaConsoleBox />
               </>
             }
           />
 
           {/* Troubleshoot Page */}
           <Route
-            path="onida/troubleshoot"
+            // path="onida/troubleshoot"
+            path={`/${brandName}/onida/troubleshoot`}
             element={
               <>
                 <OnidaOffers />
@@ -836,12 +934,14 @@ function App() {
                 <OnidaChatbot />
                 <OnidaContactUsFloating />
                 <OnidaFooter />
+                <OnidaConsoleBox />
               </>
             }
           />
           {/* Troubleshoot Page */}
           <Route
-            path="onida/exoticdeletecards"
+            // path="onida/exoticdeletecards"
+            path={`/${brandName}/onida/exoticdeletecards`}
             element={
               <>
                 <OnidaOffers />
@@ -850,13 +950,15 @@ function App() {
                 <OnidaChatbot />
                 <OnidaContactUsFloating />
                 <OnidaFooter />
+                <OnidaConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="onida/tv"
+            // path="onida/tv"
+            path={`/${brandName}/onida/tv`}
             element={
               <>
                 <OnidaOffers />
@@ -865,13 +967,15 @@ function App() {
                 <OnidaChatbot />
                 <OnidaContactUsFloating />
                 <OnidaFooter />
+                <OnidaConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="onida/washing"
+            // path="onida/washing"
+            path={`/${brandName}/onida/washing`}
             element={
               <>
                 <OnidaOffers />
@@ -880,13 +984,15 @@ function App() {
                 <OnidaChatbot />
                 <OnidaContactUsFloating />
                 <OnidaFooter />
+                <OnidaConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="onida/microwave"
+            // path="onida/microwave"
+            path={`/${brandName}/onida/microwave`}
             element={
               <>
                 <OnidaOffers />
@@ -895,13 +1001,15 @@ function App() {
                 <OnidaChatbot />
                 <OnidaContactUsFloating />
                 <OnidaFooter />
+                <OnidaConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="onida/Refrigerator"
+            // path="onida/Refrigerator"
+            path={`/${brandName}/onida/Refrigerator`}
             element={
               <>
                 <OnidaOffers />
@@ -910,13 +1018,15 @@ function App() {
                 <OnidaChatbot />
                 <OnidaContactUsFloating />
                 <OnidaFooter />
+                <OnidaConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="onida/DishWasher"
+            // path="onida/DishWasher"
+            path={`/${brandName}/onida/DishWasher`}
             element={
               <>
                 <OnidaOffers />
@@ -925,13 +1035,15 @@ function App() {
                 <OnidaChatbot />
                 <OnidaContactUsFloating />
                 <OnidaFooter />
+                <OnidaConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="onida/aircondition"
+            // path="onida/aircondition"
+            path={`/${brandName}/onida/aircondition`}
             element={
               <>
                 <OnidaOffers />
@@ -940,13 +1052,15 @@ function App() {
                 <OnidaChatbot />
                 <OnidaContactUsFloating />
                 <OnidaFooter />
+                <OnidaConsoleBox />
               </>
             }
           />
 
           {/* All products Page */}
           <Route
-            path="onida/products"
+            // path="onida/products"
+            path={`/${brandName}/onida/products`}
             element={
               <>
                 <OnidaOffers />
@@ -955,13 +1069,15 @@ function App() {
                 <OnidaChatbot />
                 <OnidaContactUsFloating />
                 <OnidaFooter />
+                <OnidaConsoleBox />
               </>
             }
           />
           {/* ONIDA COMPONENTS END HERE -------------------------->  */}
           {/* WHIRLPOOL COMPONENTS START HERE ---------------------------> */}
           <Route
-            path="whirlpool/"
+            // path="whirlpool/"
+            path={`/${brandName}/whirlpool/`}
             element={
               <>
                 <WpOffers />
@@ -971,13 +1087,15 @@ function App() {
                 <WpChatbot />
                 <WpContactUsFloating />
                 <WpFooter />
+                <WpConsoleBox />
               </>
             }
           />
 
           {/* BookNow Page */}
           <Route
-            path="whirlpool/book-now"
+            // path="whirlpool/book-now"
+            path={`/${brandName}/whirlpool/book-now`}
             element={
               <>
                 <WpOffers />
@@ -986,13 +1104,15 @@ function App() {
                 <WpChatbot />
                 <WpContactUsFloating />
                 <WpFooter />
+                <WpConsoleBox />
               </>
             }
           />
 
           {/* Troubleshoot Page */}
           <Route
-            path="whirlpool/troubleshoot"
+            // path="whirlpool/troubleshoot"
+            path={`/${brandName}/whirlpool/troubleshoot`}
             element={
               <>
                 <WpOffers />
@@ -1001,13 +1121,15 @@ function App() {
                 <WpChatbot />
                 <WpContactUsFloating />
                 <WpFooter />
+                <WpConsoleBox />
               </>
             }
           />
 
           {/* Troubleshoot Page */}
           <Route
-            path="whirlpool/exoticdeletecards"
+            // path="whirlpool/exoticdeletecards"
+            path={`/${brandName}/whirlpool/exoticdeletecards`}
             element={
               <>
                 <WpOffers />
@@ -1016,13 +1138,15 @@ function App() {
                 <WpChatbot />
                 <WpContactUsFloating />
                 <WpFooter />
+                <WpConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="whirlpool/tv"
+            // path="whirlpool/tv"
+            path={`/${brandName}/whirlpool/tv`}
             element={
               <>
                 <WpOffers />
@@ -1031,13 +1155,15 @@ function App() {
                 <WpChatbot />
                 <WpContactUsFloating />
                 <WpFooter />
+                <WpConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="whirlpool/washing"
+            // path="whirlpool/washing"
+            path={`/${brandName}/whirlpool/washing`}
             element={
               <>
                 <WpOffers />
@@ -1046,13 +1172,15 @@ function App() {
                 <WpChatbot />
                 <WpContactUsFloating />
                 <WpFooter />
+                <WpConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="whirlpool/microwave"
+            // path="whirlpool/microwave"
+            path={`/${brandName}/whirlpool/microwave`}
             element={
               <>
                 <WpOffers />
@@ -1061,13 +1189,15 @@ function App() {
                 <WpChatbot />
                 <WpContactUsFloating />
                 <WpFooter />
+                <WpConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="whirlpool/Refrigerator"
+            // path="whirlpool/Refrigerator"
+            path={`/${brandName}/whirlpool/Refrigerator`}
             element={
               <>
                 <WpOffers />
@@ -1076,13 +1206,15 @@ function App() {
                 <WpChatbot />
                 <WpContactUsFloating />
                 <WpFooter />
+                <WpConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="whirlpool/DishWasher"
+            // path="whirlpool/DishWasher"
+            path={`/${brandName}/whirlpool/DishWasher`}
             element={
               <>
                 <WpOffers />
@@ -1091,13 +1223,15 @@ function App() {
                 <WpChatbot />
                 <WpContactUsFloating />
                 <WpFooter />
+                <WpConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="whirlpool/aircondition"
+            // path="whirlpool/aircondition"
+            path={`/${brandName}/whirlpool/aircondition`}
             element={
               <>
                 <WpOffers />
@@ -1106,13 +1240,15 @@ function App() {
                 <WpChatbot />
                 <WpContactUsFloating />
                 <WpFooter />
+                <WpConsoleBox />
               </>
             }
           />
 
           {/* All products Page */}
           <Route
-            path="whirlpool/products"
+            // path="whirlpool/products"
+            path={`/${brandName}/whirlpool/products`}
             element={
               <>
                 <WpOffers />
@@ -1121,13 +1257,15 @@ function App() {
                 <WpChatbot />
                 <WpContactUsFloating />
                 <WpFooter />
+                <WpConsoleBox />
               </>
             }
           />
           {/* WHIRLPOOL COMPONENTS END HERE -------------------------->  */}
           {/* PHILLIPS COMPONENTS START HERE ---------------------------> */}
           <Route
-            path="phillips/"
+            // path="phillips/"
+            path={`/${brandName}/phillips/`}
             element={
               <>
                 <PhillipsOffers />
@@ -1137,13 +1275,15 @@ function App() {
                 <PhillipsChatbot />
                 <PhillipsContactUsFloating />
                 <PhillipsFooter />
+                <PhillipsConsoleBox />
               </>
             }
           />
 
           {/* BookNow Page */}
           <Route
-            path="phillips/book-now"
+            // path="phillips/book-now"
+            path={`/${brandName}/phillips/book-now`}
             element={
               <>
                 <PhillipsOffers />
@@ -1152,13 +1292,15 @@ function App() {
                 <PhillipsChatbot />
                 <PhillipsContactUsFloating />
                 <PhillipsFooter />
+                <PhillipsConsoleBox />
               </>
             }
           />
 
           {/* Troubleshoot Page */}
           <Route
-            path="phillips/troubleshoot"
+            // path="phillips/troubleshoot"
+            path={`/${brandName}/phillips/troubleshoot`}
             element={
               <>
                 <PhillipsOffers />
@@ -1167,12 +1309,14 @@ function App() {
                 <PhillipsChatbot />
                 <PhillipsContactUsFloating />
                 <PhillipsFooter />
+                <PhillipsConsoleBox />
               </>
             }
           />
           {/* Troubleshoot Page */}
           <Route
-            path="phillips/exoticdeletecards"
+            // path="phillips/exoticdeletecards"
+            path={`/${brandName}/phillips/exoticdeletecards`}
             element={
               <>
                 <PhillipsOffers />
@@ -1181,13 +1325,15 @@ function App() {
                 <PhillipsChatbot />
                 <PhillipsContactUsFloating />
                 <PhillipsFooter />
+                <PhillipsConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="phillips/tv"
+            // path="phillips/tv"
+            path={`/${brandName}/phillips/tv`}
             element={
               <>
                 <PhillipsOffers />
@@ -1196,13 +1342,15 @@ function App() {
                 <PhillipsChatbot />
                 <PhillipsContactUsFloating />
                 <PhillipsFooter />
+                <PhillipsConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="phillips/washing"
+            // path="phillips/washing"
+            path={`/${brandName}/phillips/washing`}
             element={
               <>
                 <PhillipsOffers />
@@ -1211,13 +1359,15 @@ function App() {
                 <PhillipsChatbot />
                 <PhillipsContactUsFloating />
                 <PhillipsFooter />
+                <PhillipsConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="phillips/microwave"
+            // path="phillips/microwave"
+            path={`/${brandName}/phillips/microwave`}
             element={
               <>
                 <PhillipsOffers />
@@ -1226,13 +1376,15 @@ function App() {
                 <PhillipsChatbot />
                 <PhillipsContactUsFloating />
                 <PhillipsFooter />
+                <PhillipsConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="phillips/Refrigerator"
+            // path="phillips/Refrigerator"
+            path={`/${brandName}/phillips/Refrigerator`}
             element={
               <>
                 <PhillipsOffers />
@@ -1241,13 +1393,15 @@ function App() {
                 <PhillipsChatbot />
                 <PhillipsContactUsFloating />
                 <PhillipsFooter />
+                <PhillipsConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="phillips/DishWasher"
+            // path="phillips/DishWasher"
+            path={`/${brandName}/phillips/DishWasher`}
             element={
               <>
                 <PhillipsOffers />
@@ -1256,13 +1410,15 @@ function App() {
                 <PhillipsChatbot />
                 <PhillipsContactUsFloating />
                 <PhillipsFooter />
+                <PhillipsConsoleBox />
               </>
             }
           />
 
           {/* Tvcomponent Page */}
           <Route
-            path="phillips/aircondition"
+            // path="phillips/aircondition"
+            path={`/${brandName}/phillips/aircondition`}
             element={
               <>
                 <PhillipsOffers />
@@ -1271,13 +1427,15 @@ function App() {
                 <PhillipsChatbot />
                 <PhillipsContactUsFloating />
                 <PhillipsFooter />
+                <PhillipsConsoleBox />
               </>
             }
           />
 
           {/* All products Page */}
           <Route
-            path="Phillips/products"
+            // path="Phillips/products"
+            path={`/${brandName}/phillips/products`}
             element={
               <>
                 <PhillipsOffers />
@@ -1286,6 +1444,7 @@ function App() {
                 <PhillipsChatbot />
                 <PhillipsContactUsFloating />
                 <PhillipsFooter />
+                <PhillipsConsoleBox />
               </>
             }
           />

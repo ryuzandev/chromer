@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "../componentsCss/GridMultiService.css"; // Import the custom CSS file
 import { Link } from "react-router-dom";
+import { AppContext } from "../../App";
 
 function GridMultiService() {
+  const { brandName } = useContext(AppContext);
   const [isPlayingVideo1, setIsPlayingVideo1] = useState(false); // State to control video 1 play status
   const [isPlayingVideo2, setIsPlayingVideo2] = useState(false); // State to control video 2 play status
   const [isHoveredVideo1, setIsHoveredVideo1] = useState(false); // Hover state for video 1
@@ -67,11 +69,17 @@ function GridMultiService() {
             onMouseEnter={handleMouseEnterVideo1}
             onMouseLeave={handleMouseLeaveVideo1}
           >
-           
-
             {/* <iframe width="1307" height="735" src="https://www.youtube.com/embed/njX2bu-_Vw4" title="2020 LG OLED l  The Black 4K HDR 60fps" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */}
-
-            <iframe width="1307" height="735" src="https://www.youtube.com/embed/l_56hZVOGnI" title="Samsung UHD TV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe
+              width="1307"
+              height="735"
+              src="https://www.youtube.com/embed/l_56hZVOGnI"
+              title="Samsung UHD TV"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
             {isPlayingVideo1 && <div className="overlay"></div>}{" "}
             {/* Show overlay when video is playing */}
           </div>
@@ -91,7 +99,7 @@ function GridMultiService() {
                 We offer expert services for all types of washing machines,
                 ensuring efficiency and durability.
               </p>
-              <Link to="/samsung/washing">
+              <Link to={`/${brandName}/samsung/washing`}>
                 <button className="service-button">Find More</button>
               </Link>
             </div>
@@ -106,7 +114,7 @@ function GridMultiService() {
                 Our technicians are skilled in repairing air conditioners of all
                 makes and models for better cooling performance.
               </p>
-              <Link to="/samsung/aircondition">
+              <Link to={`/${brandName}/samsung/aircondition`}>
                 <button className="service-button">Find More</button>
               </Link>
             </div>
@@ -130,7 +138,7 @@ function GridMultiService() {
                 We offer professional repair services for your TV, restoring
                 your viewing experience to its fullest.
               </p>
-              <Link to="/samsung/tv">
+              <Link to={`/${brandName}/samsung/tv`}>
                 <button className="service-button">Find More</button>
               </Link>
             </div>
@@ -145,7 +153,7 @@ function GridMultiService() {
                 Quick and reliable repair services for microwave ovens, ensuring
                 optimal functionality.
               </p>
-              <Link to="/samsung/microwave">
+              <Link to={`/${brandName}/samsung/microwave`}>
                 <button className="service-button">Find More</button>
               </Link>
             </div>
@@ -159,11 +167,17 @@ function GridMultiService() {
             onMouseEnter={handleMouseEnterVideo2}
             onMouseLeave={handleMouseLeaveVideo2}
           >
-         
             {/* <iframe width="1307" height="735" src="https://www.youtube.com/embed/Tcm1QAodEDE" title="New LG Washing Machine With AI Direct Drive™ | LG" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */}
-
-            <iframe width="1307" height="735" src="https://www.youtube.com/embed/eUndqFAw8ik" title="Samsung AI Ecobubble™ Washing Machine: Simple. Gentle. Intelligent Wash." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+            <iframe
+              width="1307"
+              height="735"
+              src="https://www.youtube.com/embed/eUndqFAw8ik"
+              title="Samsung AI Ecobubble™ Washing Machine: Simple. Gentle. Intelligent Wash."
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
             {isPlayingVideo2 && <div className="overlay"></div>}{" "}
             {/* Show overlay when video is playing */}
           </div>
@@ -180,12 +194,17 @@ function GridMultiService() {
             onMouseEnter={handleMouseEnterVideo1}
             onMouseLeave={handleMouseLeaveVideo1}
           >
-          
             {/* <iframe width="1307" height="735" src="https://www.youtube.com/embed/eFW6iqF1siE" title="Embrace Ease-Of-Cooking With Scan To Cook | LG Microwave Oven | ThinQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */}
-
-            <iframe width="1307" height="735" src="https://www.youtube.com/embed/8ln4NgG0__M" title="Bespoke Side By Side Refrigerators | Designed for you, by you | Samsung" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
+            <iframe
+              width="1307"
+              height="735"
+              src="https://www.youtube.com/embed/8ln4NgG0__M"
+              title="Bespoke Side By Side Refrigerators | Designed for you, by you | Samsung"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
             {isPlayingVideo1 && <div className="overlay"></div>}{" "}
             {/* Show overlay when video is playing */}
           </div>
@@ -205,7 +224,7 @@ function GridMultiService() {
                 We offer expert services for all types of DishWasher, ensuring
                 efficiency and durability.
               </p>
-              <Link to="/samsung/DishWasher">
+              <Link to={`/${brandName}/samsung/DishWasher`}>
                 <button className="service-button">Find More</button>
               </Link>
             </div>
@@ -220,7 +239,7 @@ function GridMultiService() {
                 Our technicians are skilled in repairing air conditioners of all
                 makes and models for better cooling performance.
               </p>
-              <Link to="/samsung/Refrigerator">
+              <Link to={`/${brandName}/samsung/Refrigerator`}>
                 <button className="service-button">Find More</button>
               </Link>
             </div>

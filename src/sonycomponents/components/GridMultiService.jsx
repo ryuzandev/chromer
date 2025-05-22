@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "../componentsCss/GridMultiService.css"; // Import the custom CSS file
 import { Link } from "react-router-dom";
+import { AppContext } from "../../App";
 
 // image sources
 import dfour from "../componentsSrcAssets/psfour.jpg";
@@ -11,6 +12,7 @@ import tvfour from "../componentsSrcAssets/televisionseven.jpg";
 import rfive from "../componentsSrcAssets/speakerfive.jpg";
 
 function GridMultiService() {
+  const { brandName } = useContext(AppContext);
   const [isPlayingVideo1, setIsPlayingVideo1] = useState(false); // State to control video 1 play status
   const [isPlayingVideo2, setIsPlayingVideo2] = useState(false); // State to control video 2 play status
   const [isHoveredVideo1, setIsHoveredVideo1] = useState(false); // Hover state for video 1
@@ -101,7 +103,7 @@ function GridMultiService() {
                 "Level up your gaming experience. Where every play feels like a
                 win. #PlayStation #GameOn"
               </p>
-              <Link to="/sony/playstation">
+              <Link to={`/${brandName}/sony/playstation`}>
                 <button className="service-button">Find More</button>
               </Link>
             </div>
@@ -125,7 +127,7 @@ function GridMultiService() {
                 We offer professional repair services for your TV, restoring
                 your viewing experience to its fullest.
               </p>
-              <Link to="/sony/tv">
+              <Link to={`/${brandName}/sony/tv`}>
                 <button className="service-button">Find More</button>
               </Link>
             </div>
@@ -194,7 +196,7 @@ function GridMultiService() {
                 "Feel every beat. Hear the difference. 🎶 #SonyMusicStereo
                 #PureSound"
               </p>
-              <Link to="/sony/musicstereo">
+              <Link to={`/${brandName}/sony/musicstereo`}>
                 <button className="service-button">Find More</button>
               </Link>
             </div>

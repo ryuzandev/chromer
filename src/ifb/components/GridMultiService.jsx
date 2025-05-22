@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "../componentsCss/GridMultiService.css"; // Import the custom CSS file
 import { Link } from "react-router-dom";
+import { AppContext } from "../../App";
 
 function GridMultiService() {
+  const { brandName } = useContext(AppContext);
   const [isPlayingVideo1, setIsPlayingVideo1] = useState(false); // State to control video 1 play status
   const [isPlayingVideo2, setIsPlayingVideo2] = useState(false); // State to control video 2 play status
   const [isHoveredVideo1, setIsHoveredVideo1] = useState(false); // Hover state for video 1
@@ -67,7 +69,16 @@ function GridMultiService() {
             onMouseEnter={handleMouseEnterVideo1}
             onMouseLeave={handleMouseLeaveVideo1}
           >
-            <iframe width="1307" height="735" src="https://www.youtube.com/embed/-vcOTRp9xv4" title="IFB Chimneys - Auto Eye Function" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe
+              width="1307"
+              height="735"
+              src="https://www.youtube.com/embed/-vcOTRp9xv4"
+              title="IFB Chimneys - Auto Eye Function"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
             {isPlayingVideo1 && <div className="overlay"></div>}{" "}
             {/* Show overlay when video is playing */}
           </div>
@@ -87,7 +98,7 @@ function GridMultiService() {
                 We offer expert services for all types of washing machines,
                 ensuring efficiency and durability.
               </p>
-              <Link to="/ifb/washing">
+              <Link to={`/${brandName}/ifb/washing`}>
                 <button className="service-button">Find More</button>
               </Link>
             </div>
@@ -102,7 +113,8 @@ function GridMultiService() {
                 Our technicians are skilled in repairing air conditioners of all
                 makes and models for better cooling performance.
               </p>
-              <Link to="/ifb/aircondition">
+              {/* <Link to="/ifb/aircondition"> */}
+              <Link to={`/${brandName}/ifb/aircondition`}>
                 <button className="service-button">Find More</button>
               </Link>
             </div>
@@ -126,7 +138,8 @@ function GridMultiService() {
                 We offer professional repair services for your TV, restoring
                 your viewing experience to its fullest.
               </p>
-              <Link to="/ifb/chimney">
+              {/* <Link to="/ifb/chimney"> */}
+              <Link to={`/${brandName}/ifb/chimney`}>
                 <button className="service-button">Find More</button>
               </Link>
             </div>
@@ -141,7 +154,8 @@ function GridMultiService() {
                 Quick and reliable repair services for microwave ovens, ensuring
                 optimal functionality.
               </p>
-              <Link to="/lg/microwave">
+              {/* <Link to="/lg/microwave"> */}
+              <Link to={`/${brandName}/ifb/microwave`}>
                 <button className="service-button">Find More</button>
               </Link>
             </div>
@@ -155,9 +169,16 @@ function GridMultiService() {
             onMouseEnter={handleMouseEnterVideo2}
             onMouseLeave={handleMouseLeaveVideo2}
           >
-           
-          
-            <iframe width="1307" height="735" src="https://www.youtube.com/embed/xtHfEsqSY8Y" title="IFB DeepClean Washing Machine - Switch to 10 kg wash in just 60 minutes with Oxyjet™ Technology" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe
+              width="1307"
+              height="735"
+              src="https://www.youtube.com/embed/xtHfEsqSY8Y"
+              title="IFB DeepClean Washing Machine - Switch to 10 kg wash in just 60 minutes with Oxyjet™ Technology"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
             {isPlayingVideo2 && <div className="overlay"></div>}{" "}
             {/* Show overlay when video is playing */}
           </div>
@@ -174,9 +195,17 @@ function GridMultiService() {
             onMouseEnter={handleMouseEnterVideo1}
             onMouseLeave={handleMouseLeaveVideo1}
           >
-         
             {/* <iframe width="1307" height="735" src="https://www.youtube.com/embed/eFW6iqF1siE" title="Embrace Ease-Of-Cooking With Scan To Cook | LG Microwave Oven | ThinQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */}
-            <iframe width="481" height="855" src="https://www.youtube.com/embed/JclhyhZsj_w" title="How to use the Oil Free cooking mode in an IFB Microwave Oven" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe
+              width="481"
+              height="855"
+              src="https://www.youtube.com/embed/JclhyhZsj_w"
+              title="How to use the Oil Free cooking mode in an IFB Microwave Oven"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
             {isPlayingVideo1 && <div className="overlay"></div>}{" "}
             {/* Show overlay when video is playing */}
           </div>
@@ -196,7 +225,8 @@ function GridMultiService() {
                 We offer expert services for all types of DishWasher, ensuring
                 efficiency and durability.
               </p>
-              <Link to="/lg/DishWasher">
+              {/* <Link to="/lg/DishWasher"> */}
+              <Link to={`/${brandName}/ifb/DishWasher`}>
                 <button className="service-button">Find More</button>
               </Link>
             </div>
@@ -211,7 +241,8 @@ function GridMultiService() {
                 Our technicians are skilled in repairing air conditioners of all
                 makes and models for better cooling performance.
               </p>
-              <Link to="/lg/Refrigerator">
+              {/* <Link to="/lg/Refrigerator"> */}
+              <Link to={`/${brandName}/ifb/Refrigerator`}>
                 <button className="service-button">Find More</button>
               </Link>
             </div>

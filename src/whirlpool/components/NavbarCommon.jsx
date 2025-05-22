@@ -1,5 +1,5 @@
 // export default Navbar;
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import Fuse from "fuse.js";
 import {
@@ -12,8 +12,10 @@ import {
 import { Link } from "react-router-dom";
 import "../componentsCss/NavbarCss.css";
 import lgLogo from "../componentsSrcAssets/whirlpoollogo.png";
+import { AppContext } from "../../App";
 
 function NavbarCommon() {
+  const { brandName } = useContext(AppContext);
   const [searchTerm, setSearchTerm] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const navigate = useNavigate();
@@ -22,16 +24,36 @@ function NavbarCommon() {
   const searchableRoutes = [
     // { name: "Water purifier", path: "/whirlpool/tv" },
     // { name: "purifier Service", path: "/whirlpool/tv" },
-    { name: "Washing Machine", path: "/whirlpool/washing" },
-    { name: "Washing Machine Service", path: "/whirlpool/washing" },
-    { name: "Microwave", path: "/whirlpool/microwave" },
-    { name: "Microwave Service", path: "/whirlpool/microwave" },
-    { name: "Air Conditioner", path: "/whirlpool/aircondition" },
-    { name: "Air Conditioner Service", path: "/whirlpool/aircondition" },
-    { name: "Refrigerator", path: "/whirlpool/refridgerater" },
-    { name: "Refrigerator Service", path: "/whirlpool/Refrigerator" },
-    { name: "Dish Washer", path: "/whirlpool/DishWasher" },
-    { name: "Dish Washer Service", path: "/whirlpool/DishWasher" },
+    // { name: "Washing Machine", path: "/whirlpool/washing" },
+    // { name: "Washing Machine Service", path: "/whirlpool/washing" },
+    // { name: "Microwave", path: "/whirlpool/microwave" },
+    // { name: "Microwave Service", path: "/whirlpool/microwave" },
+    // { name: "Air Conditioner", path: "/whirlpool/aircondition" },
+    // { name: "Air Conditioner Service", path: "/whirlpool/aircondition" },
+    // { name: "Refrigerator", path: "/whirlpool/refridgerater" },
+    // { name: "Refrigerator Service", path: "/whirlpool/Refrigerator" },
+    // { name: "Dish Washer", path: "/whirlpool/DishWasher" },
+    // { name: "Dish Washer Service", path: "/whirlpool/DishWasher" },
+
+    { name: "Washing Machine", path: `/${brandName}/whirlpool/washing` },
+    {
+      name: "Washing Machine Service",
+      path: `/${brandName}/whirlpool/washing`,
+    },
+    { name: "Microwave", path: `/${brandName}/whirlpool/microwave` },
+    { name: "Microwave Service", path: `/${brandName}/whirlpool/microwave` },
+    { name: "Air Conditioner", path: `/${brandName}/whirlpool/aircondition` },
+    {
+      name: "Air Conditioner Service",
+      path: `/${brandName}/whirlpool/aircondition`,
+    },
+    { name: "Refrigerator", path: `/${brandName}/whirlpool/refrigerator` },
+    {
+      name: "Refrigerator Service",
+      path: `/${brandName}/whirlpool/Refrigerator`,
+    },
+    { name: "Dish Washer", path: `/${brandName}/whirlpool/DishWasher` },
+    { name: "Dish Washer Service", path: `/${brandName}/whirlpool/DishWasher` },
   ];
 
   const fuse = new Fuse(searchableRoutes, {
@@ -67,7 +89,7 @@ function NavbarCommon() {
         </NavbarComponent.Brand> */}
         <NavbarComponent.Brand
           as={Link}
-          to="/whirlpool"
+          to={`${brandName}/whirlpool`}
           className="d-flex align-items-center"
         >
           <img

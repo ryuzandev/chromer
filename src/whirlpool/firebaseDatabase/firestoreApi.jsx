@@ -170,3 +170,26 @@ export const forwardData = async (
     console.error("Error forwarding data: ", error);
   }
 };
+
+// sending to email
+export const SendtoEmail = (formData) => {
+  const adminEmail = "ryuzandeveloper@gmail.com"; // replace with your hardcoded admin email
+
+  // Construct email subject and body
+  const subject = encodeURIComponent(`Specimen -- ${formData.name}`);
+
+  // Format all key-value pairs into body
+  let body = "";
+  for (const [key, value] of Object.entries(formData)) {
+    body += `${key}: ${value}\n`;
+  }
+
+  const bodyEncoded = encodeURIComponent(body);
+
+  // Construct the full mailto link
+  const mailtoLink = `mailto:${adminEmail}?subject=${subject}&body=${bodyEncoded}`;
+
+  // Open the mail app or web mail in browser
+  window.location.href = mailtoLink;
+};
+
