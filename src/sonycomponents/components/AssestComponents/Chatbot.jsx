@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BsChatDotsFill } from "react-icons/bs";
-import "../../componentsCss/Chatbot.css";
+// import "../../componentsCss/Chatbot.css";
+import "../../../sonycomponents/componentsCss/Chatbot.css";
+import { AppContext } from "../../../App";
 
 const Chatbot = () => {
+  const { brandName } = useContext(AppContext);
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
@@ -25,64 +28,67 @@ const Chatbot = () => {
         {
           from: "bot",
           text: "Please visit the Television page.",
-          route: "/tv",
+          route: `/${brandName}/sony/tv`,
         },
       ]);
-    } else if (userMsg.includes("ac") || userMsg.includes("air conditioner")) {
-      setMessages((prev) => [
-        ...prev,
-        {
-          from: "bot",
-          text: "Please visit the Air Conditioner page.",
-          route: "/aircondition",
-        },
-      ]);
-    } else if (userMsg.includes("microwave")) {
-      setMessages((prev) => [
-        ...prev,
-        {
-          from: "bot",
-          text: "Please visit the Microwave page.",
-          route: "/microwave",
-        },
-      ]);
-    } else if (
-      userMsg.includes("washing") ||
-      userMsg.includes("washing machine")
-    ) {
-      setMessages((prev) => [
-        ...prev,
-        {
-          from: "bot",
-          text: "Please visit the Washing Machine page.",
-          route: "/washing",
-        },
-      ]);
-    } else if (userMsg.includes("refrigerator")) {
-      setMessages((prev) => [
-        ...prev,
-        {
-          from: "bot",
-          text: "Please visit the Refrigerator page.",
-          route: "/Refrigerator",
-        },
-      ]);
-    } else if (userMsg.includes("dish washer")) {
-      setMessages((prev) => [
-        ...prev,
-        {
-          from: "bot",
-          text: "Please visit the dish washer page.",
-          route: "/DishWasher",
-        },
-      ]);
-    } else if (userMsg.includes("music")) {
+    }
+    // else if (userMsg.includes("ac") || userMsg.includes("air conditioner")) {
+    //   setMessages((prev) => [
+    //     ...prev,
+    //     {
+    //       from: "bot",
+    //       text: "Please visit the Air Conditioner page.",
+    //       route: "/aircondition",
+    //     },
+    //   ]);
+    // } else if (userMsg.includes("microwave")) {
+    //   setMessages((prev) => [
+    //     ...prev,
+    //     {
+    //       from: "bot",
+    //       text: "Please visit the Microwave page.",
+    //       route: "/microwave",
+    //     },
+    //   ]);
+    // } else if (
+    //   userMsg.includes("washing") ||
+    //   userMsg.includes("washing machine")
+    // ) {
+    //   setMessages((prev) => [
+    //     ...prev,
+    //     {
+    //       from: "bot",
+    //       text: "Please visit the Washing Machine page.",
+    //       route: "/washing",
+    //     },
+    //   ]);
+    // } else if (userMsg.includes("refrigerator")) {
+    //   setMessages((prev) => [
+    //     ...prev,
+    //     {
+    //       from: "bot",
+    //       text: "Please visit the Refrigerator page.",
+    //       route: "/Refrigerator",
+    //     },
+    //   ]);
+    // } else if (userMsg.includes("dish washer")) {
+    //   setMessages((prev) => [
+    //     ...prev,
+    //     {
+    //       from: "bot",
+    //       text: "Please visit the dish washer page.",
+    //       route: "/DishWasher",
+    //     },
+    //   ]);
+    // }
+    else if (userMsg.includes("music")) {
       setMessages((prev) => [
         ...prev,
         {
           from: "bot",
           text: "Please visit the music stereo page.",
-          route: "/musicstereo",
+          // route: "/musicstereo",
+          route: `/${brandName}/sony/musicstereo`,
         },
       ]);
     } else if (userMsg.includes("music stereo")) {
@@ -91,7 +97,8 @@ const Chatbot = () => {
         {
           from: "bot",
           text: "Please visit the music stereo page.",
-          route: "/musicstereo",
+          // route: "/musicstereo",
+          route: `/${brandName}/sony/musicstereo`,
         },
       ]);
     } else if (userMsg.includes("playstation")) {
@@ -100,7 +107,8 @@ const Chatbot = () => {
         {
           from: "bot",
           text: "Please visit the playstation page.",
-          route: "/playstation",
+          // route: "/playstation",
+          route: `/${brandName}/sony/playstation`,
         },
       ]);
     } else if (userMsg.includes("playstation")) {
@@ -109,7 +117,8 @@ const Chatbot = () => {
         {
           from: "bot",
           text: "Please visit the playstation page.",
-          route: "/playstation",
+          // route: "/playstation",
+          route: `/${brandName}/sony/playstation`,
         },
       ]);
     } else if (userMsg.includes("play")) {
@@ -118,7 +127,8 @@ const Chatbot = () => {
         {
           from: "bot",
           text: "Please visit the playstation page.",
-          route: "/playstation",
+          // route: "/playstation",
+          route: `/${brandName}/sony/playstation`,
         },
       ]);
     } else if (userMsg.includes("yes")) {
@@ -131,7 +141,8 @@ const Chatbot = () => {
         ...prev,
         {
           from: "bot",
-          text: 'Sorry, I didn\'t get that. Try typing "television", "microwave", "AC", etc.',
+          text: `Sorry!!👁️,
+          Please name the products belong to sony 😁!`,
         },
       ]);
     }

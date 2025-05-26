@@ -21,13 +21,13 @@ function Navbar() {
 
   // const searchableRoutes = [ /* your full route list */ ];
   const searchableRoutes = [
-    { name: "Television", path: `${brandName}/sony/tv` },
-    { name: "Television Service", path: `${brandName}/sony/tv` },
-    { name: "Music", path: `${brandName}/sony/musicstereo` },
-    { name: "Music Stereo", path: `${brandName}/sony/musicstereo` },
-    { name: "Gaming", path: `${brandName}/sony/playstation` },
-    { name: "playstation", path: `${brandName}/sony/playstation` },
-    { name: "play station", path: `${brandName}/sony/playstation` },
+    { name: "Television", path: `/${brandName}/sony/tv` },
+    { name: "Television Service", path: `/${brandName}/sony/tv` },
+    { name: "Music", path: `/${brandName}/sony/musicstereo` },
+    { name: "Music Stereo", path: `/${brandName}/sony/musicstereo` },
+    { name: "Gaming", path: `/${brandName}/sony/playstation` },
+    { name: "playstation", path: `/${brandName}/sony/playstation` },
+    { name: "play station", path: `/${brandName}/sony/playstation` },
   ];
 
   const fuse = new Fuse(searchableRoutes, {

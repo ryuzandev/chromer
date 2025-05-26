@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BsChatDotsFill } from "react-icons/bs";
-import "../../componentsCss/Chatbot.css";
+// import "../../componentsCss/Chatbot.css";
+import "../../../onida/componentsCss/Chatbot.css";
+import { AppContext } from "../../../App";
 
 const Chatbot = () => {
+  const { brandName } = useContext(AppContext);
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
@@ -25,7 +28,8 @@ const Chatbot = () => {
         {
           from: "bot",
           text: "Please visit the Television page.",
-          route: "/tv",
+          // route: "/tv",
+          route: `/${brandName}/onida/tv`,
         },
       ]);
     } else if (userMsg.includes("ac") || userMsg.includes("air conditioner")) {
@@ -34,7 +38,8 @@ const Chatbot = () => {
         {
           from: "bot",
           text: "Please visit the Air Conditioner page.",
-          route: "/aircondition",
+          // route: "/aircondition",
+          route: `/${brandName}/onida/aircondition`,
         },
       ]);
     } else if (userMsg.includes("microwave")) {
@@ -43,7 +48,8 @@ const Chatbot = () => {
         {
           from: "bot",
           text: "Please visit the Microwave page.",
-          route: "/microwave",
+          // route: "/microwave",
+          route: `/${brandName}/onida/microwave`,
         },
       ]);
     } else if (
@@ -55,7 +61,8 @@ const Chatbot = () => {
         {
           from: "bot",
           text: "Please visit the Washing Machine page.",
-          route: "/washing",
+          // route: "/washing",
+          route: `/${brandName}/onida/washing`,
         },
       ]);
     } else if (userMsg.includes("refrigerator")) {
@@ -64,19 +71,22 @@ const Chatbot = () => {
         {
           from: "bot",
           text: "Please visit the Refrigerator page.",
-          route: "/Refrigerator",
+          // route: "/Refrigerator",
+          route: `/${brandName}/onida/Refrigerator`,
         },
       ]);
-    } else if (userMsg.includes("dish washer")) {
-      setMessages((prev) => [
-        ...prev,
-        {
-          from: "bot",
-          text: "Please visit the dish washer page.",
-          route: "/DishWasher",
-        },
-      ]);
-    } else if (userMsg.includes("yes")) {
+    }
+    // else if (userMsg.includes("dish washer")) {
+    //   setMessages((prev) => [
+    //     ...prev,
+    //     {
+    //       from: "bot",
+    //       text: "Please visit the dish washer page.",
+    //       route: "/DishWasher",
+    //     },
+    //   ]);
+    // }
+    else if (userMsg.includes("yes")) {
       const lastBotMsg = messages.filter((m) => m.from === "bot").slice(-1)[0];
       if (lastBotMsg?.route) {
         navigate(lastBotMsg.route);
@@ -99,7 +109,10 @@ const Chatbot = () => {
   return (
     <div className="chatbot-container">
       <div className="chatbot-icon" onClick={handleToggle}>
-        <span><b>AI BOT  </b></span><BsChatDotsFill size={35} />
+        <span>
+          <b>AI BOT </b>
+        </span>
+        <BsChatDotsFill size={35} />
       </div>
 
       {open && (

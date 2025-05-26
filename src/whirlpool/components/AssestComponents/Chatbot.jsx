@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BsChatDotsFill } from "react-icons/bs";
-import "../../componentsCss/Chatbot.css";
+// import "../../componentsCss/Chatbot.css";
+import "../../../whirlpool/componentsCss/Chatbot.css";
+import { AppContext } from "../../../App";
 
 const Chatbot = () => {
+  const { brandName } = useContext(AppContext);
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
@@ -19,13 +22,14 @@ const Chatbot = () => {
     setInput("");
 
     // Matching keywords
-    if (userMsg.includes("tv") || userMsg.includes("television")) {
+    if (userMsg.includes("pure") || userMsg.includes("purifier")) {
       setMessages((prev) => [
         ...prev,
         {
           from: "bot",
-          text: "Please visit the Television page.",
-          route: "/tv",
+          text: "Please visit the purifier page.",
+          // route: "/tv",
+          route: `/${brandName}/whirlpool/tv`,
         },
       ]);
     } else if (userMsg.includes("ac") || userMsg.includes("air conditioner")) {
@@ -34,7 +38,8 @@ const Chatbot = () => {
         {
           from: "bot",
           text: "Please visit the Air Conditioner page.",
-          route: "/aircondition",
+          // route: "/aircondition",
+          route: `/${brandName}/whirlpool/aircondition`,
         },
       ]);
     } else if (userMsg.includes("microwave")) {
@@ -43,7 +48,8 @@ const Chatbot = () => {
         {
           from: "bot",
           text: "Please visit the Microwave page.",
-          route: "/microwave",
+          // route: "/microwave",
+          route: `/${brandName}/whirlpool/microwave`,
         },
       ]);
     } else if (
@@ -55,7 +61,8 @@ const Chatbot = () => {
         {
           from: "bot",
           text: "Please visit the Washing Machine page.",
-          route: "/washing",
+          // route: "/washing",
+          route: `/${brandName}/whirlpool/washing`,
         },
       ]);
     } else if (userMsg.includes("refrigerator")) {
@@ -64,7 +71,8 @@ const Chatbot = () => {
         {
           from: "bot",
           text: "Please visit the Refrigerator page.",
-          route: "/Refrigerator",
+          // route: "/Refrigerator",
+          route: `/${brandName}/whirlpool/Refrigerator`,
         },
       ]);
     } else if (userMsg.includes("dish washer")) {
@@ -73,7 +81,8 @@ const Chatbot = () => {
         {
           from: "bot",
           text: "Please visit the dish washer page.",
-          route: "/DishWasher",
+          // route: "/DishWasher",
+          route: `/${brandName}/whirlpool/DishWasher`,
         },
       ]);
     } else if (userMsg.includes("yes")) {
@@ -99,7 +108,10 @@ const Chatbot = () => {
   return (
     <div className="chatbot-container">
       <div className="chatbot-icon" onClick={handleToggle}>
-        <span><b>AI BOT  </b></span><BsChatDotsFill size={35} />
+        <span>
+          <b>AI BOT </b>
+        </span>
+        <BsChatDotsFill size={35} />
       </div>
 
       {open && (

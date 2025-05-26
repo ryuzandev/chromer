@@ -1,6 +1,8 @@
 import React from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import "../../componentsCss/ContactUsFloating.css"; // Create this file for styling
+// import "../../componentsCss/ContactUsFloating.css"; 
+// Create this file for styling
+import "../../../phillips/componentsCss/ContactUsFloating.css";
 
 const ContactUsFloating = () => {
   const tollFreeNumber = "18001234567"; // Replace with your number

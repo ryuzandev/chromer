@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BsChatDotsFill } from "react-icons/bs";
-import "../../componentsCss/Chatbot.css";
+// import "../../componentsCss/Chatbot.css";
+import "../../../phillips/componentsCss/Chatbot.css";
 
 const Chatbot = () => {
   const [open, setOpen] = useState(false);
@@ -99,7 +100,10 @@ const Chatbot = () => {
   return (
     <div className="chatbot-container">
       <div className="chatbot-icon" onClick={handleToggle}>
-        <span><b>AI BOT  </b></span><BsChatDotsFill size={35} />
+        <span>
+          <b>AI BOT </b>
+        </span>
+        <BsChatDotsFill size={35} />
       </div>
 
       {open && (

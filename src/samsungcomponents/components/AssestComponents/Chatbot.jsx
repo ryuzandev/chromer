@@ -1,10 +1,13 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { BsChatDotsFill } from "react-icons/bs";
 import axios from "axios";
-import "../../componentsCss/Chatbot.css";
+// import "../../componentsCss/Chatbot.css";
+import "../../../samsungcomponents/componentsCss/Chatbot.css";
+import { AppContext } from "../../../App";
 
 const Chatbot = () => {
+  const { brandName } = useContext(AppContext);
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
@@ -59,7 +62,8 @@ const Chatbot = () => {
         {
           from: "bot",
           text: "Please visit the Television page.",
-          route: "/tv",
+          // route: "/tv",
+          route: `/${brandName}/samsung/tv`,
         },
       ]);
       return;
@@ -71,7 +75,8 @@ const Chatbot = () => {
         {
           from: "bot",
           text: "Please visit the Air Conditioner page.",
-          route: "/aircondition",
+          // route: "/aircondition",
+          route: `/${brandName}/samsung/aircondition`,
         },
       ]);
       return;
@@ -83,7 +88,8 @@ const Chatbot = () => {
         {
           from: "bot",
           text: "Please visit the Microwave page.",
-          route: "/microwave",
+          // route: "/microwave",
+          route: `/${brandName}/samsung/microwave`,
         },
       ]);
       return;
@@ -95,7 +101,8 @@ const Chatbot = () => {
         {
           from: "bot",
           text: "Please visit the Washing Machine page.",
-          route: "/washing",
+          // route: "/washing",
+          route: `/${brandName}/samsung/washing`,
         },
       ]);
       return;
@@ -107,7 +114,8 @@ const Chatbot = () => {
         {
           from: "bot",
           text: "Please visit the Refrigerator page.",
-          route: "/Refrigerator",
+          // route: "/Refrigerator",
+          route: `/${brandName}/samsung/Refrigerator`,
         },
       ]);
       return;
@@ -119,7 +127,8 @@ const Chatbot = () => {
         {
           from: "bot",
           text: "Please visit the Dish Washer page.",
-          route: "/DishWasher",
+          // route: "/DishWasher",
+          route: `/${brandName}/samsung/DishWasher`,
         },
       ]);
       return;
