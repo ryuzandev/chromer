@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/chromer/static/css/main.3abf2256.css",
-    "main.js": "/chromer/static/js/main.3261c7ce.js",
+    "main.css": "/chromer/static/css/main.789a76ad.css",
+    "main.js": "/chromer/static/js/main.e040dbec.js",
     "static/media/Cone.jpg": "/chromer/static/media/Cone.3673010cc04b14fd0d69.jpg",
     "static/media/oneC.jpg": "/chromer/static/media/oneC.450b02d000e60fe71255.jpg",
     "static/media/tvone.jpg": "/chromer/static/media/tvone.1e747c8a12c811e77ed7.jpg",
@@ -74,11 +74,11 @@
     "static/media/ifblogo.png": "/chromer/static/media/ifblogo.fb04e60a922a4d462d27.png",
     "static/media/lglogo.png": "/chromer/static/media/lglogo.5446735bb0b29af0cc42.png",
     "index.html": "/chromer/index.html",
-    "main.3abf2256.css.map": "/chromer/static/css/main.3abf2256.css.map",
-    "main.3261c7ce.js.map": "/chromer/static/js/main.3261c7ce.js.map"
+    "main.789a76ad.css.map": "/chromer/static/css/main.789a76ad.css.map",
+    "main.e040dbec.js.map": "/chromer/static/js/main.e040dbec.js.map"
   },
   "entrypoints": [
-    "static/css/main.3abf2256.css",
-    "static/js/main.3261c7ce.js"
+    "static/css/main.789a76ad.css",
+    "static/js/main.e040dbec.js"
   ]
 }
