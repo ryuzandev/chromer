@@ -79,6 +79,12 @@ const GoogleClone = () => {
         >
           Onida
         </div>
+        <div
+          className="gc-result-item"
+          onClick={() => navigate(`/${brandName}/haier`)}
+        >
+          Haier
+        </div>
         {/* <div className="gc-result-item" onClick={() => navigate('/phillips')}>PHILLIPS</div> */}
       </div>
     </div>
