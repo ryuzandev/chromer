@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { useState } from "react";
+// import { useState } from "react";
 
 // Importing Components FOR lgcomponents------------------------------> start
-import Offers from "./lgcomponents/components/Offers";
+// import Offers from "./lgcomponents/components/Offers";
 import Navbar from "./lgcomponents/components/Navbar";
 import NavbarCommon from "./lgcomponents/components/NavbarCommon";
 import Carousal from "./lgcomponents/components/Carousal";
@@ -14,18 +14,19 @@ import TvComponent from "./lgcomponents/components/TvComponent";
 import WashingMachine from "./lgcomponents/components/WashingMachine";
 import MicroWave from "./lgcomponents/components/MicroWave";
 import AirConditioner from "./lgcomponents/components/AirConditioner";
-import { ProductData } from "./ProductData";
+// import { ProductData } from "./ProductData";
 import AllProducts from "./lgcomponents/components/AllProducts";
 import Refrigerator from "./lgcomponents/components/Refrigerator";
 import Dishwasher from "./lgcomponents/components/DishWasher";
-import Chatbot from "./lgcomponents/components/AssestComponents/Chatbot";
-import ContactUsFloating from "./lgcomponents/components/AssestComponents/ContactUsFloating";
+// import Chatbot from "./lgcomponents/components/AssestComponents/Chatbot";
+
+// import ContactUsFloating from "./lgcomponents/components/AssestComponents/ContactUsFloating";
 import ExoticAUtoDeleteCards from "./lgcomponents/components/ExoticAutoDeleteCards";
 import ConsoleBox from "./lgcomponents/components/AssestComponents/ConsoleBox";
 // importing Components FOR lgcomponents------------------------------> end
 
 // SAMSUNG COMPONENTS START HERE------------------------------------------->
-import SamOffers from "./samsungcomponents/components/Offers";
+// import SamOffers from "./samsungcomponents/components/Offers";
 import SamNavbar from "./samsungcomponents/components/Navbar";
 import SamNavbarCommon from "./samsungcomponents/components/NavbarCommon";
 import SamCarousal from "./samsungcomponents/components/Carousal";
@@ -41,14 +42,14 @@ import SamAirConditioner from "./samsungcomponents/components/AirConditioner";
 import SamAllProducts from "./samsungcomponents/components/AllProducts";
 import SamRefrigerator from "./samsungcomponents/components/Refrigerator";
 import SamDishwasher from "./samsungcomponents/components/DishWasher";
-import SamChatbot from "./samsungcomponents/components/AssestComponents/Chatbot";
-import SamContactUsFloating from "./samsungcomponents/components/AssestComponents/ContactUsFloating";
+// import SamChatbot from "./samsungcomponents/components/AssestComponents/Chatbot";
+// import SamContactUsFloating from "./samsungcomponents/components/AssestComponents/ContactUsFloating";
 import SamExoticAUtoDeleteCards from "./samsungcomponents/components/ExoticAutoDeleteCards";
 import SamConsoleBox from "./samsungcomponents/components/AssestComponents/ConsoleBox";
 // SAMSUNG COMPONENTS END HERE----------------------------------------------->
 
 // SONY COMPONENTS START HERE------------------------------------------->
-import SonyOffers from "./sonycomponents/components/Offers";
+// import SonyOffers from "./sonycomponents/components/Offers";
 import SonyNavbar from "./sonycomponents/components/Navbar";
 import SonyNavbarCommon from "./sonycomponents/components/NavbarCommon";
 import SonyCarousal from "./sonycomponents/components/Carousal";
@@ -59,14 +60,14 @@ import SonyTroubleshootCards from "./sonycomponents/components/TroubleshootCards
 import SonyTvComponent from "./sonycomponents/components/TvComponent";
 import SonyMusicStereo from "./sonycomponents/components/MusicStereo";
 import SonyPlayStation from "./sonycomponents/components/PlayStation";
-import SonyChatbot from "./sonycomponents/components/AssestComponents/Chatbot";
-import SonyContactUsFloating from "./sonycomponents/components/AssestComponents/ContactUsFloating";
+// import SonyChatbot from "./sonycomponents/components/AssestComponents/Chatbot";
+// import SonyContactUsFloating from "./sonycomponents/components/AssestComponents/ContactUsFloating";
 import SonyExoticAUtoDeleteCards from "./sonycomponents/components/ExoticAutoDeleteCards";
 import SonyConsoleBox from "./sonycomponents/components/AssestComponents/ConsoleBox";
 // SONY COMPONENTS END HERE----------------------------------------------->
 
 // Importing Components FOR ifbcomponents------------------------------> start
-import IfbOffers from "./ifb/components/Offers";
+// import IfbOffers from "./ifb/components/Offers";
 import IfbNavbar from "./ifb/components/Navbar";
 import IfbNavbarCommon from "./ifb/components/NavbarCommon";
 import IfbCarousal from "./ifb/components/Carousal";
@@ -82,13 +83,13 @@ import IfbAirConditioner from "./ifb/components/AirConditioner";
 import IfbAllProducts from "./ifb/components/AllProducts";
 import IfbRefrigerator from "./ifb/components/Refrigerator";
 import IfbDishwasher from "./ifb/components/DishWasher";
-import IfbChatbot from "./ifb/components/AssestComponents/Chatbot";
-import IfbContactUsFloating from "./ifb/components/AssestComponents/ContactUsFloating";
+// import IfbChatbot from "./ifb/components/AssestComponents/Chatbot";
+// import IfbContactUsFloating from "./ifb/components/AssestComponents/ContactUsFloating";
 import IfbExoticAUtoDeleteCards from "./ifb/components/ExoticAutoDeleteCards";
 import IfbConsoleBox from "./ifb/components/AssestComponents/ConsoleBox";
 // importing Components FOR ifbcomponents------------------------------> end
 // Importing Components FOR ONIDAcomponents------------------------------> start
-import OnidaOffers from "./onida/components/Offers";
+// import OnidaOffers from "./onida/components/Offers";
 import OnidaNavbar from "./onida/components/Navbar";
 import OnidaNavbarCommon from "./onida/components/NavbarCommon";
 import OnidaCarousal from "./onida/components/Carousal";
@@ -104,13 +105,13 @@ import OnidaAirConditioner from "./onida/components/AirConditioner";
 import OnidaAllProducts from "./onida/components/AllProducts";
 import OnidaRefrigerator from "./onida/components/Refrigerator";
 import OnidaDishwasher from "./onida/components/DishWasher";
-import OnidaChatbot from "./onida/components/AssestComponents/Chatbot";
-import OnidaContactUsFloating from "./onida/components/AssestComponents/ContactUsFloating";
+// import OnidaChatbot from "./onida/components/AssestComponents/Chatbot";
+// import OnidaContactUsFloating from "./onida/components/AssestComponents/ContactUsFloating";
 import OnidaExoticAUtoDeleteCards from "./onida/components/ExoticAutoDeleteCards";
 import OnidaConsoleBox from "./onida/components/AssestComponents/ConsoleBox";
 // importing Components FOR ONIDAcomponents------------------------------> end
 // Importing Components FOR WHIRLPOOLcomponents------------------------------> start
-import WpOffers from "./whirlpool/components/Offers";
+// import WpOffers from "./whirlpool/components/Offers";
 import WpNavbar from "./whirlpool/components/Navbar";
 import WpNavbarCommon from "./whirlpool/components/NavbarCommon";
 import WpCarousal from "./whirlpool/components/Carousal";
@@ -126,13 +127,13 @@ import WpAirConditioner from "./whirlpool/components/AirConditioner";
 import WpAllProducts from "./whirlpool/components/AllProducts";
 import WpRefrigerator from "./whirlpool/components/Refrigerator";
 import WpDishwasher from "./whirlpool/components/DishWasher";
-import WpChatbot from "./whirlpool/components/AssestComponents/Chatbot";
-import WpContactUsFloating from "./whirlpool/components/AssestComponents/ContactUsFloating";
+// import WpChatbot from "./whirlpool/components/AssestComponents/Chatbot";
+// import WpContactUsFloating from "./whirlpool/components/AssestComponents/ContactUsFloating";
 import WpExoticAUtoDeleteCards from "./whirlpool/components/ExoticAutoDeleteCards";
 import WpConsoleBox from "./whirlpool/components/AssestComponents/ConsoleBox";
 // importing Components FOR WHIRLPOOLcomponents------------------------------> end
 // Importing Components FOR PHILLIPScomponents------------------------------> start
-import PhillipsOffers from "./phillips/components/Offers";
+// import PhillipsOffers from "./phillips/components/Offers";
 import PhillipsNavbar from "./phillips/components/Navbar";
 import PhillipsNavbarCommon from "./phillips/components/NavbarCommon";
 import PhillipsCarousal from "./phillips/components/Carousal";
@@ -148,14 +149,14 @@ import PhillipsAirConditioner from "./phillips/components/AirConditioner";
 import PhillipsAllProducts from "./phillips/components/AllProducts";
 import PhillipsRefrigerator from "./phillips/components/Refrigerator";
 import PhillipsDishwasher from "./phillips/components/DishWasher";
-import PhillipsChatbot from "./phillips/components/AssestComponents/Chatbot";
-import PhillipsContactUsFloating from "./phillips/components/AssestComponents/ContactUsFloating";
+// import PhillipsChatbot from "./phillips/components/AssestComponents/Chatbot";
+// import PhillipsContactUsFloating from "./phillips/components/AssestComponents/ContactUsFloating";
 import PhillipsExoticAUtoDeleteCards from "./phillips/components/ExoticAutoDeleteCards";
 import PhillipsConsoleBox from "./phillips/components/AssestComponents/ConsoleBox";
 // importing Components FOR PHILLIPScomponents------------------------------> end
 
 // Importing Components FOR lgcomponents------------------------------> start
-import HaierOffers from "./haier/components/Offers";
+// import HaierOffers from "./haier/components/Offers";
 import HaierNavbar from "./haier/components/Navbar";
 import HaierNavbarCommon from "./haier/components/NavbarCommon";
 import HaierCarousal from "./haier/components/Carousal";
@@ -171,8 +172,8 @@ import HaierAirConditioner from "./haier/components/AirConditioner";
 import HaierAllProducts from "./haier/components/AllProducts";
 import HaierRefrigerator from "./haier/components/Refrigerator";
 import HaierDishwasher from "./haier/components/DishWasher";
-import HaierChatbot from "./haier/components/AssestComponents/Chatbot";
-import HaierContactUsFloating from "./haier/components/AssestComponents/ContactUsFloating";
+// import HaierChatbot from "./haier/components/AssestComponents/Chatbot";
+// import HaierContactUsFloating from "./haier/components/AssestComponents/ContactUsFloating";
 import HaierExoticAUtoDeleteCards from "./haier/components/ExoticAutoDeleteCards";
 import HaierConsoleBox from "./haier/components/AssestComponents/ConsoleBox";
 // importing Components FOR haier------------------------------> end
@@ -219,12 +220,12 @@ function App() {
             path={`/${brandName}/lg/`}
             element={
               <>
-                <Offers />
+                {/* <Offers /> */}
                 <NavbarCommon />
                 <Carousal />
                 <GridMultiService />
-                <Chatbot />
-                <ContactUsFloating />
+                {/* <Chatbot /> */}
+                {/* <ContactUsFloating /> */}
                 <Footer />
                 <ConsoleBox />
               </>
@@ -237,11 +238,11 @@ function App() {
             path={`/${brandName}/lg/book-now`}
             element={
               <>
-                <Offers />
+                {/* <Offers /> */}
                 <Navbar />
                 <BookNowCards />
-                <Chatbot />
-                <ContactUsFloating />
+                {/* <Chatbot /> */}
+                {/* <ContactUsFloating /> */}
                 <Footer />
                 <ConsoleBox />
               </>
@@ -254,11 +255,11 @@ function App() {
             path={`/${brandName}/lg/troubleshoot`}
             element={
               <>
-                <Offers />
+                {/* <Offers /> */}
                 <Navbar />
                 <TroubleshootCards />
-                <Chatbot />
-                <ContactUsFloating />
+                {/* <Chatbot /> */}
+                {/* <ContactUsFloating /> */}
                 <Footer />
                 <ConsoleBox />
               </>
@@ -271,11 +272,11 @@ function App() {
             path={`/${brandName}/lg/exoticdeletecards`}
             element={
               <>
-                <Offers />
+                {/* <Offers /> */}
                 <Navbar />
                 <ExoticAUtoDeleteCards />
-                <Chatbot />
-                <ContactUsFloating />
+                {/* <Chatbot /> */}
+                {/* <ContactUsFloating /> */}
                 <Footer />
                 <ConsoleBox />
               </>
@@ -288,11 +289,11 @@ function App() {
             path={`/${brandName}/lg/tv`}
             element={
               <>
-                <Offers />
+                {/* <Offers /> */}
                 <Navbar />
                 <TvComponent />
-                <Chatbot />
-                <ContactUsFloating />
+                {/* <Chatbot /> */}
+                {/* <ContactUsFloating /> */}
                 <Footer />
                 <ConsoleBox />
               </>
@@ -305,11 +306,11 @@ function App() {
             path={`/${brandName}/lg/washing`}
             element={
               <>
-                <Offers />
+                {/* <Offers /> */}
                 <Navbar />
                 <WashingMachine />
-                <Chatbot />
-                <ContactUsFloating />
+                {/* <Chatbot /> */}
+                {/* <ContactUsFloating /> */}
                 <Footer />
                 <ConsoleBox />
               </>
@@ -322,11 +323,11 @@ function App() {
             path={`/${brandName}/lg/microwave`}
             element={
               <>
-                <Offers />
+                {/* <Offers /> */}
                 <Navbar />
                 <MicroWave />
-                <Chatbot />
-                <ContactUsFloating />
+                {/* <Chatbot /> */}
+                {/* <ContactUsFloating /> */}
                 <Footer />
                 <ConsoleBox />
               </>
@@ -339,11 +340,11 @@ function App() {
             path={`/${brandName}/lg/Refrigerator`}
             element={
               <>
-                <Offers />
+                {/* <Offers /> */}
                 <Navbar />
                 <Refrigerator />
-                <Chatbot />
-                <ContactUsFloating />
+                {/* <Chatbot /> */}
+                {/* <ContactUsFloating /> */}
                 <Footer />
                 <ConsoleBox />
               </>
@@ -356,11 +357,11 @@ function App() {
             path={`/${brandName}/lg/DishWasher`}
             element={
               <>
-                <Offers />
+                {/* <Offers /> */}
                 <Navbar />
                 <Dishwasher />
-                <Chatbot />
-                <ContactUsFloating />
+                {/* <Chatbot /> */}
+                {/* <ContactUsFloating /> */}
                 <Footer />
                 <ConsoleBox />
               </>
@@ -373,11 +374,11 @@ function App() {
             path={`/${brandName}/lg/aircondition`}
             element={
               <>
-                <Offers />
+                {/* <Offers /> */}
                 <Navbar />
                 <AirConditioner />
-                <Chatbot />
-                <ContactUsFloating />
+                {/* <Chatbot /> */}
+                {/* <ContactUsFloating /> */}
                 <Footer />
                 <ConsoleBox />
               </>
@@ -390,11 +391,11 @@ function App() {
             path={`/${brandName}/lg/products`}
             element={
               <>
-                <Offers />
+                {/* <Offers /> */}
                 <Navbar />
                 <AllProducts />
-                <Chatbot />
-                <ContactUsFloating />
+                {/* <Chatbot /> */}
+                {/* <ContactUsFloating /> */}
                 <Footer />
                 <ConsoleBox />
               </>
@@ -407,12 +408,12 @@ function App() {
             path={`/${brandName}/samsung/`}
             element={
               <>
-                <SamOffers />
+                {/* <SamOffers /> */}
                 <SamNavbarCommon />
                 <SamCarousal />
                 <SamGridMultiService />
-                <SamChatbot />
-                <SamContactUsFloating />
+                {/* <SamChatbot /> */}
+                {/* <SamContactUsFloating /> */}
                 <SamFooter />
                 <SamConsoleBox />
               </>
@@ -425,11 +426,11 @@ function App() {
             path={`/${brandName}/samsung/book-now`}
             element={
               <>
-                <SamOffers />
+                {/* <SamOffers /> */}
                 <SamNavbar />
                 <SamBookNowCards />
-                <SamChatbot />
-                <SamContactUsFloating />
+                {/* <SamChatbot /> */}
+                {/* <SamContactUsFloating /> */}
                 <SamFooter />
                 <SamConsoleBox />
               </>
@@ -442,11 +443,11 @@ function App() {
             path={`/${brandName}/samsung/troubleshoot`}
             element={
               <>
-                <SamOffers />
+                {/* <SamOffers /> */}
                 <SamNavbar />
                 <SamTroubleshootCards />
-                <SamChatbot />
-                <SamContactUsFloating />
+                {/* <SamChatbot /> */}
+                {/* <SamContactUsFloating /> */}
                 <SamFooter />
                 <SamConsoleBox />
               </>
@@ -459,11 +460,11 @@ function App() {
             path={`/${brandName}/samsung/exoticdeletecards`}
             element={
               <>
-                <SamOffers />
+                {/* <SamOffers /> */}
                 <SamNavbar />
                 <SamExoticAUtoDeleteCards />
-                <SamChatbot />
-                <SamContactUsFloating />
+                {/* <SamChatbot /> */}
+                {/* <SamContactUsFloating /> */}
                 <SamFooter />
                 <SamConsoleBox />
               </>
@@ -476,11 +477,11 @@ function App() {
             path={`/${brandName}/samsung/tv`}
             element={
               <>
-                <SamOffers />
+                {/* <SamOffers /> */}
                 <SamNavbar />
                 <SamTvComponent />
-                <SamChatbot />
-                <SamContactUsFloating />
+                {/* <SamChatbot /> */}
+                {/* <SamContactUsFloating /> */}
                 <SamFooter />
                 <SamConsoleBox />
               </>
@@ -493,11 +494,11 @@ function App() {
             path={`/${brandName}/samsung/washing`}
             element={
               <>
-                <SamOffers />
+                {/* <SamOffers /> */}
                 <SamNavbar />
                 <SamWashingMachine />
-                <SamChatbot />
-                <SamContactUsFloating />
+                {/* <SamChatbot /> */}
+                {/* <SamContactUsFloating /> */}
                 <SamFooter />
                 <SamConsoleBox />
               </>
@@ -510,11 +511,11 @@ function App() {
             path={`/${brandName}/samsung/microwave`}
             element={
               <>
-                <SamOffers />
+                {/* <SamOffers /> */}
                 <SamNavbar />
                 <SamMicroWave />
-                <SamChatbot />
-                <SamContactUsFloating />
+                {/* <SamChatbot /> */}
+                {/* <SamContactUsFloating /> */}
                 <SamFooter />
                 <SamConsoleBox />
               </>
@@ -527,11 +528,11 @@ function App() {
             path={`/${brandName}/samsung/Refrigerator`}
             element={
               <>
-                <SamOffers />
+                {/* <SamOffers /> */}
                 <SamNavbar />
                 <SamRefrigerator />
-                <SamChatbot />
-                <SamContactUsFloating />
+                {/* <SamChatbot /> */}
+                {/* <SamContactUsFloating /> */}
                 <SamFooter />
                 <SamConsoleBox />
               </>
@@ -544,11 +545,11 @@ function App() {
             path={`/${brandName}/samsung/DishWasher`}
             element={
               <>
-                <SamOffers />
+                {/* <SamOffers /> */}
                 <SamNavbar />
                 <SamDishwasher />
-                <SamChatbot />
-                <SamContactUsFloating />
+                {/* <SamChatbot /> */}
+                {/* <SamContactUsFloating /> */}
                 <SamFooter />
                 <SamConsoleBox />
               </>
@@ -561,11 +562,11 @@ function App() {
             path={`/${brandName}/samsung/aircondition`}
             element={
               <>
-                <SamOffers />
+                {/* <SamOffers /> */}
                 <SamNavbar />
                 <SamAirConditioner />
-                <SamChatbot />
-                <SamContactUsFloating />
+                {/* <SamChatbot /> */}
+                {/* <SamContactUsFloating /> */}
                 <SamFooter />
                 <SamConsoleBox />
               </>
@@ -578,11 +579,11 @@ function App() {
             path={`/${brandName}/samsung/products`}
             element={
               <>
-                <SamOffers />
+                {/* <SamOffers /> */}
                 <SamNavbar />
                 <SamAllProducts />
-                <SamChatbot />
-                <SamContactUsFloating />
+                {/* <SamChatbot /> */}
+                {/* <SamContactUsFloating /> */}
                 <SamFooter />
                 <SamConsoleBox />
               </>
@@ -595,12 +596,12 @@ function App() {
             path={`/${brandName}/sony/`}
             element={
               <>
-                <SonyOffers />
+                {/* <SonyOffers /> */}
                 <SonyNavbarCommon />
                 <SonyCarousal />
                 <SonyGridMultiService />
-                <SonyChatbot />
-                <SonyContactUsFloating />
+                {/* <SonyChatbot /> */}
+                {/* <SonyContactUsFloating /> */}
                 <SonyFooter />
                 <SonyConsoleBox />
               </>
@@ -613,11 +614,11 @@ function App() {
             path={`/${brandName}/sony/book-now`}
             element={
               <>
-                <SonyOffers />
+                {/* <SonyOffers /> */}
                 <SonyNavbar />
                 <SonyBookNowCards />
-                <SonyChatbot />
-                <SonyContactUsFloating />
+                {/* <SonyChatbot /> */}
+                {/* <SonyContactUsFloating /> */}
                 <SonyFooter />
                 <SonyConsoleBox />
               </>
@@ -630,11 +631,11 @@ function App() {
             path={`/${brandName}/sony/troubleshoot`}
             element={
               <>
-                <SonyOffers />
+                {/* <SonyOffers /> */}
                 <SonyNavbar />
                 <SonyTroubleshootCards />
-                <SonyChatbot />
-                <SonyContactUsFloating />
+                {/* <SonyChatbot /> */}
+                {/* <SonyContactUsFloating /> */}
                 <SonyFooter />
                 <SonyConsoleBox />
               </>
@@ -646,11 +647,11 @@ function App() {
             path={`/${brandName}/sony/exoticdeletecards`}
             element={
               <>
-                <SonyOffers />
+                {/* <SonyOffers /> */}
                 <SonyNavbar />
                 <SonyExoticAUtoDeleteCards />
-                <SonyChatbot />
-                <SonyContactUsFloating />
+                {/* <SonyChatbot /> */}
+                {/* <SonyContactUsFloating /> */}
                 <SonyFooter />
                 <SonyConsoleBox />
               </>
@@ -663,11 +664,11 @@ function App() {
             path={`/${brandName}/sony/tv`}
             element={
               <>
-                <SonyOffers />
+                {/* <SonyOffers /> */}
                 <SonyNavbar />
                 <SonyTvComponent />
-                <SonyChatbot />
-                <SonyContactUsFloating />
+                {/* <SonyChatbot /> */}
+                {/* <SonyContactUsFloating /> */}
                 <SonyFooter />
                 <SonyConsoleBox />
               </>
@@ -679,11 +680,11 @@ function App() {
             path={`/${brandName}/sony/musicstereo`}
             element={
               <>
-                <SonyOffers />
+                {/* <SonyOffers /> */}
                 <SonyNavbar />
                 <SonyMusicStereo />
-                <SonyChatbot />
-                <SonyContactUsFloating />
+                {/* <SonyChatbot /> */}
+                {/* <SonyContactUsFloating /> */}
                 <SonyFooter />
                 <SonyConsoleBox />
               </>
@@ -694,11 +695,11 @@ function App() {
             path={`/${brandName}/sony/playstation`}
             element={
               <>
-                <SonyOffers />
+                {/* <SonyOffers /> */}
                 <SonyNavbar />
                 <SonyPlayStation />
-                <SonyChatbot />
-                <SonyContactUsFloating />
+                {/* <SonyChatbot /> */}
+                {/* <SonyContactUsFloating /> */}
                 <SonyFooter />
                 <SonyConsoleBox />
               </>
@@ -711,11 +712,11 @@ function App() {
             path={`/${brandName}/sony/products`}
             element={
               <>
-                <SonyOffers />
+                {/* <SonyOffers /> */}
                 <Navbar />
                 <AllProducts />
-                <Chatbot />
-                <ContactUsFloating />
+                {/* <SonyChatbot /> */}
+                {/* <SonyContactUsFloating /> */}
                 <SonyFooter />
                 <SonyConsoleBox />
               </>
@@ -729,12 +730,12 @@ function App() {
             path={`/${brandName}/ifb/`}
             element={
               <>
-                <IfbOffers />
+                {/* <IfbOffers /> */}
                 <IfbNavbarCommon />
                 <IfbCarousal />
                 <IfbGridMultiService />
-                <IfbChatbot />
-                <IfbContactUsFloating />
+                {/* <IfbChatbot /> */}
+                {/* <IfbContactUsFloating /> */}
                 <IfbFooter />
                 <IfbConsoleBox />
               </>
@@ -747,11 +748,11 @@ function App() {
             path={`/${brandName}/ifb/book-now`}
             element={
               <>
-                <IfbOffers />
+                {/* <IfbOffers /> */}
                 <IfbNavbar />
                 <IfbBookNowCards />
-                <IfbChatbot />
-                <IfbContactUsFloating />
+                {/* <IfbChatbot /> */}
+                {/* <IfbContactUsFloating /> */}
                 <IfbFooter />
                 <IfbConsoleBox />
               </>
@@ -764,11 +765,11 @@ function App() {
             path={`/${brandName}/ifb/troubleshoot`}
             element={
               <>
-                <IfbOffers />
+                {/* <IfbOffers /> */}
                 <IfbNavbar />
                 <IfbTroubleshootCards />
-                <IfbChatbot />
-                <IfbContactUsFloating />
+                {/* <IfbChatbot /> */}
+                {/* <IfbContactUsFloating /> */}
                 <IfbFooter />
                 <IfbConsoleBox />
               </>
@@ -780,11 +781,11 @@ function App() {
             path={`/${brandName}/ifb/exoticdeletecards`}
             element={
               <>
-                <IfbOffers />
+                {/* <IfbOffers /> */}
                 <IfbNavbar />
                 <IfbExoticAUtoDeleteCards />
-                <IfbChatbot />
-                <IfbContactUsFloating />
+                {/* <IfbChatbot /> */}
+                {/* <IfbContactUsFloating /> */}
                 <IfbFooter />
                 <IfbConsoleBox />
               </>
@@ -797,11 +798,11 @@ function App() {
             path={`/${brandName}/ifb/chimney`}
             element={
               <>
-                <IfbOffers />
+                {/* <IfbOffers /> */}
                 <IfbNavbar />
                 <IfbChimney />
-                <IfbChatbot />
-                <IfbContactUsFloating />
+                {/* <IfbChatbot /> */}
+                {/* <IfbContactUsFloating /> */}
                 <IfbFooter />
                 <IfbConsoleBox />
               </>
@@ -814,11 +815,11 @@ function App() {
             path={`/${brandName}/ifb/washing`}
             element={
               <>
-                <IfbOffers />
+                {/* <IfbOffers /> */}
                 <IfbNavbar />
                 <IfbWashingMachine />
-                <IfbChatbot />
-                <IfbContactUsFloating />
+                {/* <IfbChatbot /> */}
+                {/* <IfbContactUsFloating /> */}
                 <IfbFooter />
                 <IfbConsoleBox />
               </>
@@ -831,11 +832,11 @@ function App() {
             path={`/${brandName}/ifb/microwave`}
             element={
               <>
-                <IfbOffers />
+                {/* <IfbOffers /> */}
                 <IfbNavbar />
                 <IfbMicroWave />
-                <IfbChatbot />
-                <IfbContactUsFloating />
+                {/* <IfbChatbot /> */}
+                {/* <IfbContactUsFloating /> */}
                 <IfbFooter />
                 <IfbConsoleBox />
               </>
@@ -848,11 +849,11 @@ function App() {
             path={`/${brandName}/ifb/Refrigerator`}
             element={
               <>
-                <IfbOffers />
+                {/* <IfbOffers /> */}
                 <IfbNavbar />
                 <IfbRefrigerator />
-                <IfbChatbot />
-                <IfbContactUsFloating />
+                {/* <IfbChatbot /> */}
+                {/* <IfbContactUsFloating /> */}
                 <IfbFooter />
                 <IfbConsoleBox />
               </>
@@ -865,11 +866,11 @@ function App() {
             path={`/${brandName}/ifb/DishWasher`}
             element={
               <>
-                <IfbOffers />
+                {/* <IfbOffers /> */}
                 <IfbNavbar />
                 <IfbDishwasher />
-                <IfbChatbot />
-                <IfbContactUsFloating />
+                {/* <IfbChatbot /> */}
+                {/* <IfbContactUsFloating /> */}
                 <IfbFooter />
                 <IfbConsoleBox />
               </>
@@ -882,11 +883,11 @@ function App() {
             path={`/${brandName}/ifb/aircondition`}
             element={
               <>
-                <IfbOffers />
+                {/* <IfbOffers /> */}
                 <IfbNavbar />
                 <IfbAirConditioner />
-                <IfbChatbot />
-                <IfbContactUsFloating />
+                {/* <IfbChatbot /> */}
+                {/* <IfbContactUsFloating /> */}
                 <IfbFooter />
                 <IfbConsoleBox />
               </>
@@ -899,11 +900,11 @@ function App() {
             path={`/${brandName}/ifb/products`}
             element={
               <>
-                <IfbOffers />
+                {/* <IfbOffers /> */}
                 <IfbNavbar />
                 <IfbAllProducts />
-                <IfbChatbot />
-                <IfbContactUsFloating />
+                {/* <IfbChatbot /> */}
+                {/* <IfbContactUsFloating /> */}
                 <IfbFooter />
                 <IfbConsoleBox />
               </>
@@ -916,12 +917,12 @@ function App() {
             path={`/${brandName}/onida/`}
             element={
               <>
-                <OnidaOffers />
+                {/* <OnidaOffers /> */}
                 <OnidaNavbarCommon />
                 <OnidaCarousal />
                 <OnidaGridMultiService />
-                <OnidaChatbot />
-                <OnidaContactUsFloating />
+                {/* <OnidaChatbot /> */}
+                {/* <OnidaContactUsFloating /> */}
                 <OnidaFooter />
                 <OnidaConsoleBox />
               </>
@@ -934,11 +935,11 @@ function App() {
             path={`/${brandName}/onida/book-now`}
             element={
               <>
-                <OnidaOffers />
+                {/* <OnidaOffers /> */}
                 <OnidaNavbar />
                 <OnidaBookNowCards />
-                <OnidaChatbot />
-                <OnidaContactUsFloating />
+                {/* <OnidaChatbot /> */}
+                {/* <OnidaContactUsFloating /> */}
                 <OnidaFooter />
                 <OnidaConsoleBox />
               </>
@@ -951,11 +952,11 @@ function App() {
             path={`/${brandName}/onida/troubleshoot`}
             element={
               <>
-                <OnidaOffers />
+                {/* <OnidaOffers /> */}
                 <OnidaNavbar />
                 <OnidaTroubleshootCards />
-                <OnidaChatbot />
-                <OnidaContactUsFloating />
+                {/* <OnidaChatbot /> */}
+                {/* <OnidaContactUsFloating /> */}
                 <OnidaFooter />
                 <OnidaConsoleBox />
               </>
@@ -967,11 +968,11 @@ function App() {
             path={`/${brandName}/onida/exoticdeletecards`}
             element={
               <>
-                <OnidaOffers />
+                {/* <OnidaOffers /> */}
                 <OnidaNavbar />
                 <OnidaExoticAUtoDeleteCards />
-                <OnidaChatbot />
-                <OnidaContactUsFloating />
+                {/* <OnidaChatbot /> */}
+                {/* <OnidaContactUsFloating /> */}
                 <OnidaFooter />
                 <OnidaConsoleBox />
               </>
@@ -984,11 +985,11 @@ function App() {
             path={`/${brandName}/onida/tv`}
             element={
               <>
-                <OnidaOffers />
+                {/* <OnidaOffers /> */}
                 <OnidaNavbar />
                 <OnidaTvComponent />
-                <OnidaChatbot />
-                <OnidaContactUsFloating />
+                {/* <OnidaChatbot /> */}
+                {/* <OnidaContactUsFloating /> */}
                 <OnidaFooter />
                 <OnidaConsoleBox />
               </>
@@ -1001,11 +1002,11 @@ function App() {
             path={`/${brandName}/onida/washing`}
             element={
               <>
-                <OnidaOffers />
+                {/* <OnidaOffers /> */}
                 <OnidaNavbar />
                 <OnidaWashingMachine />
-                <OnidaChatbot />
-                <OnidaContactUsFloating />
+                {/* <OnidaChatbot /> */}
+                {/* <OnidaContactUsFloating /> */}
                 <OnidaFooter />
                 <OnidaConsoleBox />
               </>
@@ -1018,11 +1019,11 @@ function App() {
             path={`/${brandName}/onida/microwave`}
             element={
               <>
-                <OnidaOffers />
+                {/* <OnidaOffers /> */}
                 <OnidaNavbar />
                 <OnidaMicroWave />
-                <OnidaChatbot />
-                <OnidaContactUsFloating />
+                {/* <OnidaChatbot /> */}
+                {/* <OnidaContactUsFloating /> */}
                 <OnidaFooter />
                 <OnidaConsoleBox />
               </>
@@ -1035,11 +1036,11 @@ function App() {
             path={`/${brandName}/onida/Refrigerator`}
             element={
               <>
-                <OnidaOffers />
+                {/* <OnidaOffers /> */}
                 <OnidaNavbar />
                 <OnidaRefrigerator />
-                <OnidaChatbot />
-                <OnidaContactUsFloating />
+                {/* <OnidaChatbot /> */}
+                {/* <OnidaContactUsFloating /> */}
                 <OnidaFooter />
                 <OnidaConsoleBox />
               </>
@@ -1052,11 +1053,11 @@ function App() {
             path={`/${brandName}/onida/DishWasher`}
             element={
               <>
-                <OnidaOffers />
+                {/* <OnidaOffers /> */}
                 <OnidaNavbar />
                 <OnidaDishwasher />
-                <OnidaChatbot />
-                <OnidaContactUsFloating />
+                {/* <OnidaChatbot /> */}
+                {/* <OnidaContactUsFloating /> */}
                 <OnidaFooter />
                 <OnidaConsoleBox />
               </>
@@ -1069,11 +1070,11 @@ function App() {
             path={`/${brandName}/onida/aircondition`}
             element={
               <>
-                <OnidaOffers />
+                {/* <OnidaOffers /> */}
                 <OnidaNavbar />
                 <OnidaAirConditioner />
-                <OnidaChatbot />
-                <OnidaContactUsFloating />
+                {/* <OnidaChatbot /> */}
+                {/* <OnidaContactUsFloating /> */}
                 <OnidaFooter />
                 <OnidaConsoleBox />
               </>
@@ -1086,11 +1087,11 @@ function App() {
             path={`/${brandName}/onida/products`}
             element={
               <>
-                <OnidaOffers />
+                {/* <OnidaOffers /> */}
                 <OnidaNavbar />
                 <OnidaAllProducts />
-                <OnidaChatbot />
-                <OnidaContactUsFloating />
+                {/* <OnidaChatbot /> */}
+                {/* <OnidaContactUsFloating /> */}
                 <OnidaFooter />
                 <OnidaConsoleBox />
               </>
@@ -1103,12 +1104,12 @@ function App() {
             path={`/${brandName}/whirlpool/`}
             element={
               <>
-                <WpOffers />
+                {/* <WpOffers /> */}
                 <WpNavbarCommon />
                 <WpCarousal />
                 <WpGridMultiService />
-                <WpChatbot />
-                <WpContactUsFloating />
+                {/* <WpChatbot /> */}
+                {/* <WpContactUsFloating /> */}
                 <WpFooter />
                 <WpConsoleBox />
               </>
@@ -1121,11 +1122,11 @@ function App() {
             path={`/${brandName}/whirlpool/book-now`}
             element={
               <>
-                <WpOffers />
+                {/* <WpOffers /> */}
                 <WpNavbar />
                 <WpBookNowCards />
-                <WpChatbot />
-                <WpContactUsFloating />
+                {/* <WpChatbot /> */}
+                {/* <WpContactUsFloating /> */}
                 <WpFooter />
                 <WpConsoleBox />
               </>
@@ -1138,11 +1139,11 @@ function App() {
             path={`/${brandName}/whirlpool/troubleshoot`}
             element={
               <>
-                <WpOffers />
+                {/* <WpOffers /> */}
                 <WpNavbar />
                 <WpTroubleshootCards />
-                <WpChatbot />
-                <WpContactUsFloating />
+                {/* <WpChatbot /> */}
+                {/* <WpContactUsFloating /> */}
                 <WpFooter />
                 <WpConsoleBox />
               </>
@@ -1155,11 +1156,11 @@ function App() {
             path={`/${brandName}/whirlpool/exoticdeletecards`}
             element={
               <>
-                <WpOffers />
+                {/* <WpOffers /> */}
                 <WpNavbar />
                 <WpExoticAUtoDeleteCards />
-                <WpChatbot />
-                <WpContactUsFloating />
+                {/* <WpChatbot /> */}
+                {/* <WpContactUsFloating /> */}
                 <WpFooter />
                 <WpConsoleBox />
               </>
@@ -1172,11 +1173,11 @@ function App() {
             path={`/${brandName}/whirlpool/tv`}
             element={
               <>
-                <WpOffers />
+                {/* <WpOffers /> */}
                 <WpNavbar />
                 <WpTvComponent />
-                <WpChatbot />
-                <WpContactUsFloating />
+                {/* <WpChatbot /> */}
+                {/* <WpContactUsFloating /> */}
                 <WpFooter />
                 <WpConsoleBox />
               </>
@@ -1189,11 +1190,11 @@ function App() {
             path={`/${brandName}/whirlpool/washing`}
             element={
               <>
-                <WpOffers />
+                {/* <WpOffers /> */}
                 <WpNavbar />
                 <WpWashingMachine />
-                <WpChatbot />
-                <WpContactUsFloating />
+                {/* <WpChatbot /> */}
+                {/* <WpContactUsFloating /> */}
                 <WpFooter />
                 <WpConsoleBox />
               </>
@@ -1206,11 +1207,11 @@ function App() {
             path={`/${brandName}/whirlpool/microwave`}
             element={
               <>
-                <WpOffers />
+                {/* <WpOffers /> */}
                 <WpNavbar />
                 <WpMicroWave />
-                <WpChatbot />
-                <WpContactUsFloating />
+                {/* <WpChatbot /> */}
+                {/* <WpContactUsFloating /> */}
                 <WpFooter />
                 <WpConsoleBox />
               </>
@@ -1223,11 +1224,11 @@ function App() {
             path={`/${brandName}/whirlpool/Refrigerator`}
             element={
               <>
-                <WpOffers />
+                {/* <WpOffers /> */}
                 <WpNavbar />
                 <WpRefrigerator />
-                <WpChatbot />
-                <WpContactUsFloating />
+                {/* <WpChatbot /> */}
+                {/* <WpContactUsFloating /> */}
                 <WpFooter />
                 <WpConsoleBox />
               </>
@@ -1240,11 +1241,11 @@ function App() {
             path={`/${brandName}/whirlpool/DishWasher`}
             element={
               <>
-                <WpOffers />
+                {/* <WpOffers /> */}
                 <WpNavbar />
                 <WpDishwasher />
-                <WpChatbot />
-                <WpContactUsFloating />
+                {/* <WpChatbot /> */}
+                {/* <WpContactUsFloating /> */}
                 <WpFooter />
                 <WpConsoleBox />
               </>
@@ -1257,11 +1258,11 @@ function App() {
             path={`/${brandName}/whirlpool/aircondition`}
             element={
               <>
-                <WpOffers />
+                {/* <WpOffers /> */}
                 <WpNavbar />
                 <WpAirConditioner />
-                <WpChatbot />
-                <WpContactUsFloating />
+                {/* <WpChatbot /> */}
+                {/* <WpContactUsFloating /> */}
                 <WpFooter />
                 <WpConsoleBox />
               </>
@@ -1274,11 +1275,11 @@ function App() {
             path={`/${brandName}/whirlpool/products`}
             element={
               <>
-                <WpOffers />
+                {/* <WpOffers /> */}
                 <WpNavbar />
                 <WpAllProducts />
-                <WpChatbot />
-                <WpContactUsFloating />
+                {/* <WpChatbot /> */}
+                {/* <WpContactUsFloating /> */}
                 <WpFooter />
                 <WpConsoleBox />
               </>
@@ -1291,12 +1292,12 @@ function App() {
             path={`/${brandName}/phillips/`}
             element={
               <>
-                <PhillipsOffers />
+                {/* <PhillipsOffers /> */}
                 <PhillipsNavbarCommon />
                 <PhillipsCarousal />
                 <PhillipsGridMultiService />
-                <PhillipsChatbot />
-                <PhillipsContactUsFloating />
+                {/* <PhillipsChatbot /> */}
+                {/* <PhillipsContactUsFloating /> */}
                 <PhillipsFooter />
                 <PhillipsConsoleBox />
               </>
@@ -1309,11 +1310,11 @@ function App() {
             path={`/${brandName}/phillips/book-now`}
             element={
               <>
-                <PhillipsOffers />
+                {/* <PhillipsOffers /> */}
                 <PhillipsNavbar />
                 <PhillipsBookNowCards />
-                <PhillipsChatbot />
-                <PhillipsContactUsFloating />
+                {/* <PhillipsChatbot /> */}
+                {/* <PhillipsContactUsFloating /> */}
                 <PhillipsFooter />
                 <PhillipsConsoleBox />
               </>
@@ -1326,11 +1327,11 @@ function App() {
             path={`/${brandName}/phillips/troubleshoot`}
             element={
               <>
-                <PhillipsOffers />
+                {/* <PhillipsOffers /> */}
                 <PhillipsNavbar />
                 <PhillipsTroubleshootCards />
-                <PhillipsChatbot />
-                <PhillipsContactUsFloating />
+                {/* <PhillipsChatbot /> */}
+                {/* <PhillipsContactUsFloating /> */}
                 <PhillipsFooter />
                 <PhillipsConsoleBox />
               </>
@@ -1342,11 +1343,11 @@ function App() {
             path={`/${brandName}/phillips/exoticdeletecards`}
             element={
               <>
-                <PhillipsOffers />
+                {/* <PhillipsOffers /> */}
                 <PhillipsNavbar />
                 <PhillipsExoticAUtoDeleteCards />
-                <PhillipsChatbot />
-                <PhillipsContactUsFloating />
+                {/* <PhillipsChatbot /> */}
+                {/* <PhillipsContactUsFloating /> */}
                 <PhillipsFooter />
                 <PhillipsConsoleBox />
               </>
@@ -1359,11 +1360,11 @@ function App() {
             path={`/${brandName}/phillips/tv`}
             element={
               <>
-                <PhillipsOffers />
+                {/* <PhillipsOffers /> */}
                 <PhillipsNavbar />
                 <PhillipsTvComponent />
-                <PhillipsChatbot />
-                <PhillipsContactUsFloating />
+                {/* <PhillipsChatbot /> */}
+                {/* <PhillipsContactUsFloating /> */}
                 <PhillipsFooter />
                 <PhillipsConsoleBox />
               </>
@@ -1376,11 +1377,11 @@ function App() {
             path={`/${brandName}/phillips/washing`}
             element={
               <>
-                <PhillipsOffers />
+                {/* <PhillipsOffers /> */}
                 <PhillipsNavbar />
                 <PhillipsWashingMachine />
-                <PhillipsChatbot />
-                <PhillipsContactUsFloating />
+                {/* <PhillipsChatbot /> */}
+                {/* <PhillipsContactUsFloating /> */}
                 <PhillipsFooter />
                 <PhillipsConsoleBox />
               </>
@@ -1393,11 +1394,11 @@ function App() {
             path={`/${brandName}/phillips/microwave`}
             element={
               <>
-                <PhillipsOffers />
+                {/* <PhillipsOffers /> */}
                 <PhillipsNavbar />
                 <PhillipsMicroWave />
-                <PhillipsChatbot />
-                <PhillipsContactUsFloating />
+                {/* <PhillipsChatbot /> */}
+                {/* <PhillipsContactUsFloating /> */}
                 <PhillipsFooter />
                 <PhillipsConsoleBox />
               </>
@@ -1410,11 +1411,11 @@ function App() {
             path={`/${brandName}/phillips/Refrigerator`}
             element={
               <>
-                <PhillipsOffers />
+                {/* <PhillipsOffers /> */}
                 <PhillipsNavbar />
                 <PhillipsRefrigerator />
-                <PhillipsChatbot />
-                <PhillipsContactUsFloating />
+                {/* <PhillipsChatbot /> */}
+                {/* <PhillipsContactUsFloating /> */}
                 <PhillipsFooter />
                 <PhillipsConsoleBox />
               </>
@@ -1427,11 +1428,11 @@ function App() {
             path={`/${brandName}/phillips/DishWasher`}
             element={
               <>
-                <PhillipsOffers />
+                {/* <PhillipsOffers /> */}
                 <PhillipsNavbar />
                 <PhillipsDishwasher />
-                <PhillipsChatbot />
-                <PhillipsContactUsFloating />
+                {/* <PhillipsChatbot /> */}
+                {/* <PhillipsContactUsFloating /> */}
                 <PhillipsFooter />
                 <PhillipsConsoleBox />
               </>
@@ -1444,11 +1445,11 @@ function App() {
             path={`/${brandName}/phillips/aircondition`}
             element={
               <>
-                <PhillipsOffers />
+                {/* <PhillipsOffers /> */}
                 <PhillipsNavbar />
                 <PhillipsAirConditioner />
-                <PhillipsChatbot />
-                <PhillipsContactUsFloating />
+                {/* <PhillipsChatbot /> */}
+                {/* <PhillipsContactUsFloating /> */}
                 <PhillipsFooter />
                 <PhillipsConsoleBox />
               </>
@@ -1461,11 +1462,11 @@ function App() {
             path={`/${brandName}/phillips/products`}
             element={
               <>
-                <PhillipsOffers />
+                {/* <PhillipsOffers /> */}
                 <PhillipsNavbar />
                 <PhillipsAllProducts />
-                <PhillipsChatbot />
-                <PhillipsContactUsFloating />
+                {/* <PhillipsChatbot /> */}
+                {/* <PhillipsContactUsFloating /> */}
                 <PhillipsFooter />
                 <PhillipsConsoleBox />
               </>
@@ -1478,12 +1479,12 @@ function App() {
             path={`/${brandName}/haier/`}
             element={
               <>
-                <HaierOffers />
+                {/* <HaierOffers /> */}
                 <HaierNavbarCommon />
                 <HaierCarousal />
                 <HaierGridMultiService />
-                <HaierChatbot />
-                <HaierContactUsFloating />
+                {/* <HaierChatbot /> */}
+                {/* <HaierContactUsFloating /> */}
                 <HaierFooter />
                 <HaierConsoleBox />
               </>
@@ -1496,11 +1497,11 @@ function App() {
             path={`/${brandName}/haier/book-now`}
             element={
               <>
-                <HaierOffers />
+                {/* <HaierOffers /> */}
                 <HaierNavbar />
                 <HaierBookNowCards />
-                <HaierChatbot />
-                <HaierContactUsFloating />
+                {/* <HaierChatbot /> */}
+                {/* <HaierContactUsFloating /> */}
                 <HaierFooter />
                 <HaierConsoleBox />
               </>
@@ -1513,11 +1514,11 @@ function App() {
             path={`/${brandName}/haier/troubleshoot`}
             element={
               <>
-                <HaierOffers />
+                {/* <HaierOffers /> */}
                 <HaierNavbar />
                 <HaierTroubleshootCards />
-                <HaierChatbot />
-                <HaierContactUsFloating />
+                {/* <HaierChatbot /> */}
+                {/* <HaierContactUsFloating /> */}
                 <HaierFooter />
                 <HaierConsoleBox />
               </>
@@ -1530,11 +1531,11 @@ function App() {
             path={`/${brandName}/haier/exoticdeletecards`}
             element={
               <>
-                <HaierOffers />
+                {/* <HaierOffers /> */}
                 <HaierNavbar />
                 <HaierExoticAUtoDeleteCards />
-                <HaierChatbot />
-                <HaierContactUsFloating />
+                {/* <HaierChatbot /> */}
+                {/* <HaierContactUsFloating /> */}
                 <HaierFooter />
                 <HaierConsoleBox />
               </>
@@ -1547,11 +1548,11 @@ function App() {
             path={`/${brandName}/haier/tv`}
             element={
               <>
-                <HaierOffers />
+                {/* <HaierOffers /> */}
                 <HaierNavbar />
                 <HaierTvComponent />
-                <HaierChatbot />
-                <HaierContactUsFloating />
+                {/* <HaierChatbot /> */}
+                {/* <HaierContactUsFloating /> */}
                 <HaierFooter />
                 <HaierConsoleBox />
               </>
@@ -1564,11 +1565,11 @@ function App() {
             path={`/${brandName}/haier/washing`}
             element={
               <>
-                <HaierOffers />
+                {/* <HaierOffers /> */}
                 <HaierNavbar />
                 <HaierWashingMachine />
-                <HaierChatbot />
-                <HaierContactUsFloating />
+                {/* <HaierChatbot /> */}
+                {/* <HaierContactUsFloating /> */}
                 <HaierFooter />
                 <HaierConsoleBox />
               </>
@@ -1581,11 +1582,11 @@ function App() {
             path={`/${brandName}/haier/microwave`}
             element={
               <>
-                <HaierOffers />
+                {/* <HaierOffers /> */}
                 <HaierNavbar />
                 <HaierMicroWave />
-                <HaierChatbot />
-                <HaierContactUsFloating />
+                {/* <HaierChatbot /> */}
+                {/* <HaierContactUsFloating /> */}
                 <HaierFooter />
                 <HaierConsoleBox />
               </>
@@ -1598,11 +1599,11 @@ function App() {
             path={`/${brandName}/haier/Refrigerator`}
             element={
               <>
-                <HaierOffers />
+                {/* <HaierOffers /> */}
                 <HaierNavbar />
                 <HaierRefrigerator />
-                <HaierChatbot />
-                <HaierContactUsFloating />
+                {/* <HaierChatbot /> */}
+                {/* <HaierContactUsFloating /> */}
                 <HaierFooter />
                 <HaierConsoleBox />
               </>
@@ -1615,11 +1616,11 @@ function App() {
             path={`/${brandName}/haier/waterheater`}
             element={
               <>
-                <HaierOffers />
+                {/* <HaierOffers /> */}
                 <HaierNavbar />
                 <HaierDishwasher />
-                <HaierChatbot />
-                <HaierContactUsFloating />
+                {/* <HaierChatbot /> */}
+                {/* <HaierContactUsFloating /> */}
                 <HaierFooter />
                 <HaierConsoleBox />
               </>
@@ -1632,11 +1633,11 @@ function App() {
             path={`/${brandName}/haier/aircondition`}
             element={
               <>
-                <HaierOffers />
+                {/* <HaierOffers /> */}
                 <HaierNavbar />
                 <HaierAirConditioner />
-                <HaierChatbot />
-                <HaierContactUsFloating />
+                {/* <HaierChatbot /> */}
+                {/* <HaierContactUsFloating /> */}
                 <HaierFooter />
                 <HaierConsoleBox />
               </>
@@ -1649,11 +1650,11 @@ function App() {
             path={`/${brandName}/haier/products`}
             element={
               <>
-                <HaierOffers />
+                {/* <HaierOffers /> */}
                 <HaierNavbar />
                 <HaierAllProducts />
-                <HaierChatbot />
-                <HaierContactUsFloating />
+                {/* <HaierChatbot /> */}
+                {/* <HaierContactUsFloating /> */}
                 <HaierFooter />
                 <HaierConsoleBox />
               </>

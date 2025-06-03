@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BsChatDotsFill } from "react-icons/bs";
 // import "../../componentsCss/Chatbot.css";
-import "../../../lgcomponents/componentsCss/Chatbot.css";
+import "../../../haier/componentsCss/Chatbot.css";
 import { AppContext } from "../../../App";
 
 const Chatbot = () => {
