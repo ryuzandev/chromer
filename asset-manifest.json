@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/chromer/static/css/main.e44e9300.css",
-    "main.js": "/chromer/static/js/main.2bce9da6.js",
+    "main.css": "/chromer/static/css/main.25177b5d.css",
+    "main.js": "/chromer/static/js/main.4ff742a3.js",
     "static/media/dtwo.jpg": "/chromer/static/media/dtwo.a935af984c37625f925d.jpg",
     "static/media/Cone.jpg": "/chromer/static/media/Cone.3673010cc04b14fd0d69.jpg",
     "static/media/oneC.jpg": "/chromer/static/media/oneC.450b02d000e60fe71255.jpg",
@@ -54,14 +54,12 @@
     "static/media/mfive.jpg": "/chromer/static/media/mfive.f55d61ff91d9aa3be99d.jpg",
     "static/media/msix.jpg": "/chromer/static/media/msix.f5ab93596d5e31f3fa5c.jpg",
     "static/media/mone.jpg": "/chromer/static/media/mone.dcf1c2d6fe2c13338522.jpg",
-    "static/media/bootstrap-icons.woff?": "/chromer/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
     "static/media/wone.jpg": "/chromer/static/media/wone.7abca3e30f6d12dffe1b.jpg",
     "static/media/wthree.jpg": "/chromer/static/media/wthree.dc6a25d61c4a75e9f3b5.jpg",
     "static/media/wsix.jpg": "/chromer/static/media/wsix.cf75383ccde6a47e7a65.jpg",
     "static/media/athree.jpg": "/chromer/static/media/athree.924026a006550ba6b083.jpg",
     "static/media/atwo.jpg": "/chromer/static/media/atwo.3a38912a0f55ec117ac2.jpg",
     "static/media/afour.jpg": "/chromer/static/media/afour.4c0bde8df3b6d6955a96.jpg",
-    "static/media/bootstrap-icons.woff2?": "/chromer/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
     "static/media/mtwo.jpg": "/chromer/static/media/mtwo.13ca3d7bfbbda76e306d.jpg",
     "static/media/two.avif": "/chromer/static/media/two.f5fd879b3c0a5d4c1a49.avif",
     "static/media/afive.jpg": "/chromer/static/media/afive.bbef7db45e35f829e220.jpg",
@@ -75,11 +73,11 @@
     "static/media/ifblogo.png": "/chromer/static/media/ifblogo.fb04e60a922a4d462d27.png",
     "static/media/lglogo.png": "/chromer/static/media/lglogo.5446735bb0b29af0cc42.png",
     "index.html": "/chromer/index.html",
-    "main.e44e9300.css.map": "/chromer/static/css/main.e44e9300.css.map",
-    "main.2bce9da6.js.map": "/chromer/static/js/main.2bce9da6.js.map"
+    "main.25177b5d.css.map": "/chromer/static/css/main.25177b5d.css.map",
+    "main.4ff742a3.js.map": "/chromer/static/js/main.4ff742a3.js.map"
   },
   "entrypoints": [
-    "static/css/main.e44e9300.css",
-    "static/js/main.2bce9da6.js"
+    "static/css/main.25177b5d.css",
+    "static/js/main.4ff742a3.js"
   ]
 }
